@@ -1,0 +1,86 @@
+commit f66d994923c59f74a9afc7f59022d10020893892
+Author: janika.kalliokoski@helsinki.fi <jbkallio@cubbli20-gold.local>
+Date:   Mon Mar 21 12:44:47 2022 +0200
+
+    poisto ja muutos
+
+ tiedostoja/file2.txt                 | 0
+ tiedostoja/{file1.txt => file22.txt} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit ec3ddcb6f1880c9b99c245a8f3bdc814cd0cedb9
+Author: janika.kalliokoski@helsinki.fi <jbkallio@cubbli20-gold.local>
+Date:   Mon Mar 21 12:41:24 2022 +0200
+
+    tiedostojen luonti
+
+ tiedostoja/file1.txt | 0
+ tiedostoja/file2.txt | 0
+ tiedostoja/file3.txt | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit ea3be0a7c11de34fcf63be34417cbfa7f80cc8bd
+Author: janika.kalliokoski@helsinki.fi <jbkallio@cubbli20-gold.local>
+Date:   Mon Mar 21 12:33:01 2022 +0200
+
+    muutokset
+
+ eka.txt    | 2 +-
+ kolmas.txt | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+commit e3e3ba7865adc36f375967404bac8aac611d9267
+Author: janika.kalliokoski@helsinki.fi <jbkallio@cubbli20-gold.local>
+Date:   Mon Mar 21 12:29:48 2022 +0200
+
+    muutos
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit db56d74bd24f97c2ab731b1d3df7f56bd36e01c1
+Author: janika.kalliokoski@helsinki.fi <jbkallio@cubbli20-gold.local>
+Date:   Mon Mar 21 12:27:37 2022 +0200
+
+    poisto
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 70e38c277e009a2378d52c4776fb1f79926cbd62
+Author: janika.kalliokoski@helsinki.fi <jbkallio@cubbli20-gold.local>
+Date:   Fri Mar 18 16:47:19 2022 +0200
+
+    muutokset tiedostoihin
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit 7403778584e4ab46353ed296df036f9ebea74efa
+Author: janika.kalliokoski@helsinki.fi <jbkallio@cubbli20-gold.local>
+Date:   Fri Mar 18 16:43:57 2022 +0200
+
+    kolmas.txt luotu
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit def659d5fda2dac1edbe9465d74c76c18dad9c59
+Author: janika.kalliokoski@helsinki.fi <jbkallio@cubbli20-gold.local>
+Date:   Fri Mar 18 16:38:38 2022 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit d6cb294cb126ab107f558fb2c89e8316430fa664
+Author: janika.kalliokoski@helsinki.fi <jbkallio@cubbli20-gold.local>
+Date:   Fri Mar 18 16:31:42 2022 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
