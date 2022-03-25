@@ -1,6 +1,6 @@
 **hello** *world* ~~:-)!~~
 
-***linkit***
+**linkit**
 
 [gitlog.txt](https://github.com/janikakalliokoski/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
 
