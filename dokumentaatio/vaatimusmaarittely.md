@@ -2,7 +2,7 @@
 ## Sovelluksen tarkoitus
 Sovelluksen avulla käyttäjät pystyvät kirjaamaan itselleen muistiin, missä ravintoloissa he ovat käyneet ja antamaan ravintoloille kirjallisen arvostelun.
 ## Käyttäjät
-Alkuun sovelluksessa on vain yksi käyttäjärooli, eli se käyttäjä joka kirjaa ravintola arvosteluita itselleen sovellukseen ylös.
+Alkuun sovelluksessa on vain yksi käyttäjärooli, eli se käyttäjä, joka kirjaa ravintola-arvosteluita itselleen sovellukseen ylös.
 ## Käyttöliittymät
 Sovellus koostuu neljästä eri käyttöliittymästä. Kirjautumisnäkymä johon sovellus aukeaa ja siitä on mahdollista siirtyä käyttäjän rekisteröintinäkymään tai listaan ravintoloista, joissa käyttäjä on käynyt ja siitä edelleen näkymään, jossa käyttäjä kirjoittaa arvostelut.
 ## Perusversion tarjoama toiminnallisuus
@@ -18,7 +18,7 @@ Sovellus koostuu neljästä eri käyttöliittymästä. Kirjautumisnäkymä johon
 ## Jatkokehitysideoita
 Perusversiota voi laajentaa esimerkiksi seuraavasti:
 - Arvosteluiden editointi
-- Arvostelujen poistaminen
-- 1-5 tähtien antaminen ravintolalle
+- Arvosteluiden poistaminen
+- 1-5 tähden antaminen ravintolalle
 - Ravintoloiden järjestäminen parhaimmasta huonoimpaan arvosteluiden mukaan
 - Käyttäjätunnuksen poisto
