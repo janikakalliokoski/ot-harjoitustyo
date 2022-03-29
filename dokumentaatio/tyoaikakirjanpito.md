@@ -1,3 +1,3 @@
 |*päivä*|*aika (h)*|*mitä tein*                                            |
 |-------|----------|-------------------------------------------------------|
-| 29.3. |    1,5   |vaativuusmäärittely                                    |
+| 29.3. |    1,5   |vaativuusmäärittely / markdown harjoittelu             |
