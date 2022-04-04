@@ -1,9 +1,10 @@
 from tkinter import ttk, constants
 
 class LoginView:
-    def __init__(self,root, handle_create_user):
+    def __init__(self,root, handle_create_user, handle_login):
         self._root = root
         self._handle_create_user = handle_create_user
+        self._handle_login = handle_login
         self._frame = None
 
         self._initialize()
@@ -33,7 +34,7 @@ class LoginView:
         password.grid(padx=5, pady=5)
         password_entry.grid(row=2, column=1, sticky=(constants.E, constants.W), padx=5, pady=5)
 
-        button=ttk.Button(master=self._frame, text="Login")
+        button=ttk.Button(master=self._frame, text="Login", command=self._handle_login)
         button2=ttk.Button(master=self._frame, text="Create user", command=self._handle_create_user)
 
         button.grid(columnspan=2, sticky=(constants.E, constants.W), padx=5, pady=5)
