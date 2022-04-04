@@ -21,17 +21,17 @@ class CreateReviewview:
         
         heading.grid(columnspan=2, sticky=constants.W, padx=5, pady=5)
 
-        username=ttk.Label(master=self._frame, text="Username (min. 5 characters)")
-        username_entry=ttk.Entry(master=self._frame)
+        name=ttk.Label(master=self._frame, text="Name of the restaurant visited")
+        name_entry=ttk.Entry(master=self._frame)
 
-        username.grid(padx=5, pady=5)
-        username_entry.grid(row=1, column=1, sticky=(constants.E, constants.W), padx=5, pady=5)
+        name.grid(padx=5, pady=5)
+        name_entry.grid(row=1, column=1, sticky=(constants.E, constants.W), padx=5, pady=5)
 
-        password=ttk.Label(master=self._frame, text="Password (min. 6 characters)")
-        password_entry=ttk.Entry(master=self._frame, show="*")
+        review=ttk.Label(master=self._frame, text="Write here the review")
+        review_entry=ttk.Entry(master=self._frame)
 
-        password.grid(padx=5, pady=5)
-        password_entry.grid(row=2, column=1, sticky=(constants.E, constants.W), padx=5, pady=5)
+        review.grid(padx=5, pady=5)
+        review_entry.grid(row=2, column=1, sticky=(constants.E, constants.W), padx=5, pady=5)
 
         button=ttk.Button(master=self._frame, text="Back", command=self._handle_back)
 
