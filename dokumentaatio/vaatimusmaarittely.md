@@ -22,3 +22,5 @@ Perusversiota voi laajentaa esimerkiksi seuraavasti:
 - 1-5 tähden antaminen ravintolalle
 - Ravintoloiden järjestäminen parhaimmasta huonoimpaan arvosteluiden mukaan
 - Käyttäjätunnuksen poisto
+- Muut käyttäjät näkevät toisten käyttäjien tekemät arvostelut
+- Admin käyttäjä, joka voi poistaa normaalikäyttäjien arvosteluja sekä poistaa normaalikäyttäjiä
