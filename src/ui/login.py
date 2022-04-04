@@ -1,36 +1,41 @@
-from tkinter import Tk, ttk, constants
+from tkinter import ttk, constants
 
 class LoginView:
-    def __init__(self,root):
+    def __init__(self,root, handle_create_user):
         self._root = root
+        self._handle_create_user = handle_create_user
+        self._frame = None
 
-    def start(self):
-        heading=ttk.Label(master=self._root, text="Login")
+        self._initialize()
+    
+    def pack(self):
+        self._frame.pack(fill=constants.X)
 
-        username=ttk.Label(master=self._root, text="Username")
-        username_entry=ttk.Entry(master=self._root)
+    def destroy(self):
+        self._frame.destroy()
 
-        password=ttk.Label(master=self._root, text="Password")
-        password_entry=ttk.Entry(master=self._root, show="*")
+    def _initialize(self):
+        self._frame = ttk.Frame(master=self._root)
 
-        button=ttk.Button(master=self._root, text="Login")
-        button2=ttk.Button(master=self._root, text="Create user")
+        heading_label = ttk.Label(master=self._frame, text="Login")
 
-        heading.grid(columnspan=2, sticky=constants.W, padx=5, pady=5)
+        heading_label.grid(columnspan=2, sticky=constants.W, padx=5, pady=5)
+
+        username=ttk.Label(master=self._frame, text="Username")
+        username_entry=ttk.Entry(master=self._frame)
+
         username.grid(padx=5, pady=5)
         username_entry.grid(row=1, column=1, sticky=(constants.E, constants.W), padx=5, pady=5)
+
+        password=ttk.Label(master=self._frame, text="Password")
+        password_entry=ttk.Entry(master=self._frame, show="*")
+
         password.grid(padx=5, pady=5)
         password_entry.grid(row=2, column=1, sticky=(constants.E, constants.W), padx=5, pady=5)
+
+        button=ttk.Button(master=self._frame, text="Login")
+        button2=ttk.Button(master=self._frame, text="Create user", command=self._handle_create_user)
+
         button.grid(columnspan=2, sticky=(constants.E, constants.W), padx=5, pady=5)
         button2.grid(columnspan=2, sticky=(constants.E, constants.W), padx=5, pady=5)
-
-        self._root.grid_columnconfigure(1, weight=1, minsize=300)
-
-window = Tk()
-window.configure(bg='hot pink')
-window.title("Login")
-
-ui = LoginView(window)
-ui.start()
-
-window.mainloop()
+        self._frame.grid_columnconfigure(1, weight=1, minsize=300)
