@@ -1,10 +1,9 @@
-from tkinter import ttk, constants
+from tkinter import ttk, constants, Tk
 
 class ReviewsView:
-    def __init__(self, root, handle_logout, handle_create_review):
+    def __init__(self, root, handle_login):
         self._root = root
-        self._handle_logout = handle_logout
-        self._handle_create_review = handle_create_review
+        self._handle_login = handle_login
         self._frame = None
 
         self._initialize()
@@ -21,8 +20,8 @@ class ReviewsView:
         heading=ttk.Label(master=self._frame, text="Reviews of restaurants visited")
         heading.grid(columnspan=2, sticky=constants.W, padx=5, pady=5)
 
-        button=ttk.Button(master=self._frame, text="Log out", command=self._handle_logout)
-        button2=ttk.Button(master=self._frame, text="Create a review", command=self._handle_create_review)
+        button=ttk.Button(master=self._frame, text="Log out", command=self._handle_login)
+        button2=ttk.Button(master=self._frame, text="Create a review")
 
         button.grid(columnspan=2, sticky=(constants.E, constants.W), padx=5, pady=5)
         button2.grid(columnspan=2, sticky=(constants.E, constants.W), padx=5, pady=5)
