@@ -24,6 +24,11 @@ class UserRepository:
         self.db.execute("commit")
         return all_users
 
+    def delete_table(self):
+        self.db.execute("begin")
+        self.db.execute("drop table users1")
+        self.db.execute("commit")
+
 if __name__ == "__main__":
     u = UserRepository()
     u.create_table()
