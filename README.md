@@ -9,3 +9,9 @@ Sovellus, jossa käyttäjä voi kirjata ylös missä ravintoloissa on käynyt ja
 [tyoaikakirjanpito.md](https://github.com/janikakalliokoski/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
 
 [changelog.md](https://github.com/janikakalliokoski/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
+
+## Komentorivitoiminnot
+
+1. Ohjelman voi suorittaa komennolla poetry run invoke start
+2. Testit voi suorittaa komennolla poetry run invoke test
+3. testikattavuuden saa komennolla poetry run invoke coverage-report
