@@ -7,4 +7,3 @@ class User:
     # attribuutti username kuvaa käyttäjän käyttäjätunnusta
     # attribuutti password kuvaa käyttäjän salasanaa
     # molemmat attribuutit ovat merkkijonoja
-    

@@ -1,10 +1,10 @@
-from tkinter import Tk
-from login import LoginView
-from create_user import CreateUserView
-from reviews import ReviewsView
+from ui.login import LoginView
+from ui.create_user import CreateUserView
+from ui.reviews import ReviewsView
+
 
 class UI:
-    def __init__(self,root):
+    def __init__(self, root):
         self._root = root
         self._current_view = None
 
@@ -39,7 +39,7 @@ class UI:
         self._hide_current_view()
 
         self._current_view = CreateUserView(
-            self._root, self._handle_login
+            self._root, self._handle_login, self._handle_create_user
         )
 
         self._current_view.pack()
@@ -53,10 +53,3 @@ class UI:
 
         self._current_view.pack()
 
-window = Tk()
-window.title("Restaurant review app")
-
-ui = UI(window)
-ui.start()
-
-window.mainloop()
