@@ -2,9 +2,8 @@ import sqlite3
 
 from entities.user import User
 
-
 class UserRepository:
-    def __init__(self, name: str):
+    def __init__(self, name):
         self.db = sqlite3.connect(name)
         self.db.isolation_level = None
         self.name = name
@@ -30,7 +29,7 @@ class UserRepository:
 
     def find_by_username(self, username):
         self.db.execute("begin")
-        found_user = self.db.execute("select * from users where username = ?", (username,)).fetchone()
+        found_user = self.db.execute("select * from users1 where username = ?", (username,)).fetchone()
         self.db.execute("commit")
         return found_user
 
