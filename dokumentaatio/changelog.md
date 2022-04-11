@@ -10,3 +10,4 @@
 ## Viikko 4
 - sovelluslogiikka yhdistetty käyttöliittymään käyttäjän luonnin ja sisäänkirjautumisen suhteen
 - käyttäjää luodessa sovellus ilmoittaa, jos tunnus tai salasana on liian lyhyt tai jos tunnus on jo olemassa
+- kirjautuessa sisään sovellus ilmoittaa, jos käyttäjätunnus tai salasana on virheellinen / sitä ei löydy
