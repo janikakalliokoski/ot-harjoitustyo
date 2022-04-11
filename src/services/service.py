@@ -2,7 +2,7 @@ from entities.user import User
 from entities.review import Review
 
 from repositories.user_repository import (
-    UserRepository as default_user_repository
+    user_repository as default_user_repository
 )
 
 class InvalidCredentialsError(Exception):
@@ -37,7 +37,7 @@ class ReviewService:
     def logout(self):
         self._user = None
 
-    def create_user(self, username, password, login=True):
+    def create_user(self, username: str, password: str, login=True):
         existing = self._user_repository.find_by_username(username)
 
         if existing:

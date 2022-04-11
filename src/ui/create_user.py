@@ -3,9 +3,9 @@ from services.service import service, UsernameExistsError
 
 
 class CreateUserView:
-    def __init__(self, root, handle_login, handle_create_user):
+    def __init__(self, root, handle_show_login_view, handle_create_user):
         self._root = root
-        self._handle_login = handle_login
+        self._handle_show_login_view = handle_show_login_view
         self._handle_create_user = handle_create_user
         self._frame = None
         self._username_entry = None
@@ -86,6 +86,15 @@ class CreateUserView:
         button = ttk.Button(master=self._frame,
                             text="Create user", command=self._create_user_handler)
 
+        button2 = ttk.Button(master=self._frame,
+                            text="Back", command=self._handle_show_login_view)
+
         button.grid(columnspan=2, sticky=(
             constants.E, constants.W), padx=5, pady=5)
+
+        button2.grid(columnspan=2, sticky=(
+            constants.E, constants.W), padx=5, pady=5)
+
+        self._hide_error()
+        
         self._frame.grid_columnconfigure(1, weight=1, minsize=300)
