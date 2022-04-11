@@ -1,8 +1,8 @@
 from entities.user import User
-from entities.review import Review
+#from entities.review import Review
 
 from repositories.user_repository import (
-    user_repository as default_user_repository
+    User_repository as default_user_repository
 )
 
 class InvalidCredentialsError(Exception):
@@ -15,8 +15,8 @@ class UsernameExistsError(Exception):
 class ReviewService:
     # tämä luokka vastaa sovelluslogiikasta
     def __init__(
-        self, 
-        user_repository = default_user_repository
+            self, 
+            user_repository=default_user_repository
     ):
         self._user = None
         self._user_repository = user_repository
@@ -50,4 +50,4 @@ class ReviewService:
             
         return user
 
-service = ReviewService()
+SERVICE = ReviewService()

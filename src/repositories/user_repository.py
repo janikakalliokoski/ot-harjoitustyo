@@ -40,4 +40,4 @@ class UserRepository:
         self._connection.commit()
 
 
-user_repository = UserRepository(get_database_connection())
+User_repository = UserRepository(get_database_connection())

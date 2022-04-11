@@ -5,8 +5,8 @@ def main():
     window = Tk()
     window.title("Restaurant review app")
 
-    ui = UI(window)
-    ui.start()
+    ui_view = UI(window)
+    ui_view.start()
 
     window.mainloop()
 
