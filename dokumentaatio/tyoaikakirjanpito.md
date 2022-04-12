@@ -9,3 +9,4 @@
 | 6.4.  |  2,5  | sovelluslogiikkaa                                     |
 | 11.4. |  2,5  | sovelluslogiikkan parantelua                          |
 |       |  0,5  | testaus                                               |
+| 12.4  |   1   | pylintin avulla koodin laadun parantamista            |
