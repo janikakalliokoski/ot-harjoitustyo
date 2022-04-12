@@ -1,2 +1,2 @@
-![Screenshot](arkkitehtuuri.png)
+![Screenshot](./kuvat/arkkitehtuuri.png)
 
