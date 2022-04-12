@@ -5,17 +5,21 @@ from repositories.user_repository import (
     User_repository as default_user_repository
 )
 
+
 class InvalidCredentialsError(Exception):
     pass
+
 
 class UsernameExistsError(Exception):
     pass
 
 # tämä luokka vastaa sovelluslogiikasta
+
+
 class ReviewService:
     # tämä luokka vastaa sovelluslogiikasta
     def __init__(
-            self, 
+            self,
             user_repository=default_user_repository
     ):
         self._user = None
@@ -47,7 +51,8 @@ class ReviewService:
 
         if login:
             self._user = user
-            
+
         return user
+
 
 SERVICE = ReviewService()

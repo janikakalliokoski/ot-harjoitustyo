@@ -87,7 +87,7 @@ class CreateUserView:
                             text="Create user", command=self._create_user_handler)
 
         button2 = ttk.Button(master=self._frame,
-                            text="Back", command=self._handle_show_login_view)
+                             text="Back", command=self._handle_show_login_view)
 
         button.grid(columnspan=2, sticky=(
             constants.E, constants.W), padx=5, pady=5)
@@ -96,5 +96,5 @@ class CreateUserView:
             constants.E, constants.W), padx=5, pady=5)
 
         self._hide_error()
-        
+
         self._frame.grid_columnconfigure(1, weight=1, minsize=300)

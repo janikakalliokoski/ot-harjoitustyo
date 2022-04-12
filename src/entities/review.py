@@ -1,6 +1,6 @@
 # luokka yksittäisestä arviosta
 # attribuutteina ravintolan nimi, arvostelu,
-# User-olio joka kuvaa tehtävän omistajaa ja 
+# User-olio joka kuvaa tehtävän omistajaa ja
 
 class Review:
     def __init__(self, restaurant, review, user=None):
