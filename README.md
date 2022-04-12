@@ -16,4 +16,6 @@ Sovellus, jossa käyttäjä voi kirjata ylös missä ravintoloissa on käynyt ja
 
 1. Ohjelman voi suorittaa komennolla poetry run invoke start
 2. Testit voi suorittaa komennolla poetry run invoke test
-3. testikattavuuden saa komennolla poetry run invoke coverage-report
+3. Testikattavuuden saa komennolla poetry run invoke coverage-report
+4. Koodin voi automaattisesti formatoida komennolla poetry run invoke format
+5. Pylintin laatutarkistuksen saa komennolla poetry run invoke lint
