@@ -10,6 +10,8 @@ Sovellus, jossa käyttäjä voi kirjata ylös missä ravintoloissa on käynyt ja
 
 [changelog.md](https://github.com/janikakalliokoski/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
 
+[arkkitehtuuri.md](https://github.com/janikakalliokoski/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
+
 ## Komentorivitoiminnot
 
 1. Ohjelman voi suorittaa komennolla poetry run invoke start
