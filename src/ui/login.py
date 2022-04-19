@@ -1,7 +1,6 @@
 from tkinter import ttk, constants, StringVar
 from services.service import SERVICE, InvalidCredentialsError
 
-
 class LoginView:
     def __init__(self, root, handle_create_user, handle_login):
         self._root = root

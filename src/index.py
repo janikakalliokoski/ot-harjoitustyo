@@ -4,7 +4,6 @@ from ui.ui import UI
 
 def main():
     window = Tk()
-    window.configure(bg="hot pink")
     window.title("Restaurant review app")
 
     ui_view = UI(window)

@@ -46,7 +46,7 @@ class ReviewService:
 
         if existing:
             raise UsernameExistsError(f"Username {username} already exists")
-
+    
         user = self._user_repository.create_user(User(username, password))
 
         if login:

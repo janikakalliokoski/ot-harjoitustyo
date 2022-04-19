@@ -1,4 +1,4 @@
-from tkinter import ttk, constants, StringVar
+from tkinter import ttk, constants, StringVar, messagebox
 from services.service import SERVICE, UsernameExistsError
 
 
@@ -12,6 +12,8 @@ class CreateUserView:
         self._password_entry = None
         self._error_variable = None
         self._error_label = None
+        self._created_variable = None
+        self._created_label = None
 
         self._initialize()
 
@@ -40,6 +42,7 @@ class CreateUserView:
         try:
             SERVICE.create_user(username, password)
             self._handle_create_user()
+            messagebox.showinfo("user created", f"User {username} created!")
         except UsernameExistsError:
             self._show_error(f"Username {username} already exists")
 
