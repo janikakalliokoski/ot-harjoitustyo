@@ -12,3 +12,7 @@
 - käyttäjää luodessa sovellus ilmoittaa, jos tunnus tai salasana on liian lyhyt tai jos tunnus on jo olemassa
 - kirjautuessa sisään sovellus ilmoittaa, jos käyttäjätunnus tai salasana on virheellinen / sitä ei löydy
 - testit, löytyykö kaikki käyttäjät tietokannasta ja löytyykö käyttäjä käyttäjänimellä
+
+## Viikko 5
+- kun käyttäjätunnus luodaan, saa käyttäjä tästä ilmoituksen
+- testeille oma testitietokanta
