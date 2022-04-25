@@ -25,7 +25,8 @@ class ReviewsView:
 
         button = ttk.Button(master=self._frame,
                             text="Log out", command=self._handle_login)
-        button2 = ttk.Button(master=self._frame, text="Create a review", command=self._handle_create)
+        button2 = ttk.Button(
+            master=self._frame, text="Create a review", command=self._handle_create)
 
         button2.grid(columnspan=2, sticky=(
             constants.E, constants.W), padx=5, pady=5)

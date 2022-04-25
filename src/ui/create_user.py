@@ -31,11 +31,13 @@ class CreateUserView:
             return
 
         if len(username) < 5:
-            messagebox.showerror("username too short", "Username must be at least 5 characters long")
+            messagebox.showerror("username too short",
+                                 "Username must be at least 5 characters long")
             return
 
         if len(password) < 6:
-            messagebox.showerror("password too short", "Password must be at least 6 characters long")
+            messagebox.showerror("password too short",
+                                 "Password must be at least 6 characters long")
             return
 
         try:
@@ -43,7 +45,8 @@ class CreateUserView:
             self._handle_create_user()
             messagebox.showinfo("user created", f"User {username} created!")
         except UsernameExistsError:
-            messagebox.showerror("username already exists", f"User {username} already exists")
+            messagebox.showerror("username already exists",
+                                 f"User {username} already exists")
 
     def _initialize(self):
         self._frame = ttk.Frame(master=self._root)

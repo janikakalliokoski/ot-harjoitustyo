@@ -6,6 +6,7 @@ from services.service import (
     UsernameExistsError
 )
 
+
 class FakeUserRepository:
     def __init__(self, users=None):
         self.users = users or []
@@ -30,4 +31,3 @@ class FakeUserRepository:
 
     def delete_all(self):
         self.users = []
-

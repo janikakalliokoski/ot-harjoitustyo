@@ -37,7 +37,8 @@ class CreateReviewview:
         review_entry.grid(row=2, column=1, sticky=(
             constants.E, constants.W), padx=5, pady=5)
 
-        button1 = ttk.Button(master=self._frame, text="Ok", command=self._handle_review)
+        button1 = ttk.Button(master=self._frame, text="Ok",
+                             command=self._handle_review)
 
         button1.grid(columnspan=2, sticky=(
             constants.E, constants.W), padx=5, pady=5)

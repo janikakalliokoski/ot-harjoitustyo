@@ -27,7 +27,8 @@ class LoginView:
             SERVICE.login(username, password)
             self._handle_login()
         except InvalidCredentialsError:
-            messagebox.showerror("Invalid credentials", "Invalid username or password")
+            messagebox.showerror("Invalid credentials",
+                                 "Invalid username or password")
 
     def _initialize(self):
         self._frame = ttk.Frame(master=self._root)
