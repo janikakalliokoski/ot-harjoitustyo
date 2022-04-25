@@ -11,5 +11,7 @@
 |       |  0,5  | testaus                                               |
 | 12.4  |   1   | pylintin avulla koodin laadun parantamista            |
 | 19.4. |   1   | testeille oma testitietokanta                         |
-| 19.4. |  0,5  | ilmoitus kun käyttäjä on luotu                        |
-| yht:  |  18,5 |                                                       |
+|       |  0,5  | ilmoitus kun käyttäjä on luotu                        |
+| 25.4. |  0,5  | virheilmoitukset messageboxeihin                      |
+|       |  0,5  | create review näkymä                                  |
+| yht:  |  19,5 |                                                       |
