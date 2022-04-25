@@ -1,10 +1,11 @@
-from tkinter import ttk, constants, Tk
+from tkinter import ttk, constants
 
 
 class ReviewsView:
-    def __init__(self, root, handle_login):
+    def __init__(self, root, handle_login, handle_create):
         self._root = root
         self._handle_login = handle_login
+        self._handle_create = handle_create
         self._frame = None
 
         self._initialize()
@@ -24,10 +25,11 @@ class ReviewsView:
 
         button = ttk.Button(master=self._frame,
                             text="Log out", command=self._handle_login)
-        button2 = ttk.Button(master=self._frame, text="Create a review")
+        button2 = ttk.Button(master=self._frame, text="Create a review", command=self._handle_create)
 
-        button.grid(columnspan=2, sticky=(
-            constants.E, constants.W), padx=5, pady=5)
         button2.grid(columnspan=2, sticky=(
             constants.E, constants.W), padx=5, pady=5)
+        button.grid(columnspan=2, sticky=(
+            constants.E, constants.W), padx=5, pady=5)
+
         self._frame.grid_columnconfigure(1, weight=1, minsize=300)

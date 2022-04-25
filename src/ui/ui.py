@@ -1,3 +1,4 @@
+from ui.create_review import CreateReviewview
 from ui.login import LoginView
 from ui.create_user import CreateUserView
 from ui.reviews import ReviewsView
@@ -26,6 +27,9 @@ class UI:
     def _handle_reviews(self):
         self._show_reviews_view()
 
+    def _handle_create_review(self):
+        self._show_create_review_view()
+
     def _show_login_view(self):
         self._hide_current_view()
 
@@ -48,7 +52,16 @@ class UI:
         self._hide_current_view()
 
         self._current_view = ReviewsView(
-            self._root, self._handle_login
+            self._root, self._handle_login, self._handle_create_review
+        )
+
+        self._current_view.pack()
+
+    def _show_create_review_view(self):
+        self._hide_current_view()
+
+        self._current_view = CreateReviewview(
+            self._root, self._handle_reviews
         )
 
         self._current_view.pack()
