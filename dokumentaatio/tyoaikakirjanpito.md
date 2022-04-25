@@ -10,4 +10,6 @@
 | 11.4. |  2,5  | sovelluslogiikkan parantelua                          |
 |       |  0,5  | testaus                                               |
 | 12.4  |   1   | pylintin avulla koodin laadun parantamista            |
-| yht:  |  17   |                                                       |
+| 19.4. |   1   | testeille oma testitietokanta                         |
+| 19.4. |  0,5  | ilmoitus kun käyttäjä on luotu                        |
+| yht:  |  18,5 |                                                       |
