@@ -2,6 +2,9 @@
 
 Sovellus, jossa käyttäjä voi kirjata ylös missä ravintoloissa on käynyt ja antaa niille arvostelut
 
+## Release
+[linkki releaseen](https://github.com/janikakalliokoski/ot-harjoitustyo/releases/tag/viikko5)
+
 ## Dokumentaatio
 
 [vaatimusmaarittely.md](https://github.com/janikakalliokoski/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
