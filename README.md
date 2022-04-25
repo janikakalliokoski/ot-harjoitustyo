@@ -12,6 +12,11 @@ Sovellus, jossa käyttäjä voi kirjata ylös missä ravintoloissa on käynyt ja
 
 [arkkitehtuuri.md](https://github.com/janikakalliokoski/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
 
+## Asennus
+1. asenna riippuvuudet komennolla poetry install
+2. suorita vaadittavat alustustoimenpiteet komennolla poetry run invoke start
+3. käynnistä sovellus komennolla poetry run invoke start
+
 ## Komentorivitoiminnot
 
 1. Ohjelman voi suorittaa komennolla poetry run invoke start
