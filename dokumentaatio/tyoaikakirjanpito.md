@@ -14,4 +14,6 @@
 |       |  0,5  | ilmoitus kun käyttäjä on luotu                        |
 | 25.4. |  0,5  | virheilmoitukset messageboxeihin                      |
 |       |  0,5  | create review näkymä                                  |
-| yht:  |  19,5 |                                                       |
+|       |   1   | nostettu testikattavuutta                             |
+|       |  0,5  | arkkitehtuurikuvausta                                 |
+| yht:  |  21   |                                                       |
