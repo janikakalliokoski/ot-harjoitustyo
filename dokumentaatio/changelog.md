@@ -17,3 +17,4 @@
 - kun käyttäjätunnus luodaan, saa käyttäjä tästä ilmoituksen
 - testeille oma testitietokanta
 - create review näkymä
+- virheilmoitukset messageboxeihin
