@@ -13,6 +13,10 @@ class InvalidCredentialsError(Exception):
 class UsernameExistsError(Exception):
     pass
 
+
+class EmptyLines(Exception):
+    pass
+
 # tämä luokka vastaa sovelluslogiikasta
 
 

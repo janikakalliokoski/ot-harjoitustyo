@@ -1,4 +1,4 @@
-from tkinter import ttk, constants
+from tkinter import ttk, constants, messagebox
 
 
 class CreateReviewview:
@@ -6,6 +6,8 @@ class CreateReviewview:
         self._root = root
         self._handle_review = handle_review
         self._frame = None
+        self._name_entry = None
+        self._review_entry = None
 
         self._initialize()
 
@@ -14,6 +16,16 @@ class CreateReviewview:
 
     def destroy(self):
         self._frame.destroy()
+
+    def _create_review_handler(self):
+        name = self._name_entry.get()
+        review = self._review_entry.get()
+
+        if len(name) == 0 or len(review) == 0:
+            messagebox.showerror("empty lines", "Name and review required")
+            return
+        elif len(name) != 0 and len(review) != 0:
+            messagebox.showinfo("review created!", "Review created!")
 
     def _initialize(self):
         self._frame = ttk.Frame(master=self._root)
@@ -24,21 +36,21 @@ class CreateReviewview:
 
         name = ttk.Label(master=self._frame,
                          text="Name of the restaurant visited")
-        name_entry = ttk.Entry(master=self._frame)
+        self._name_entry = ttk.Entry(master=self._frame)
 
         name.grid(padx=5, pady=5)
-        name_entry.grid(row=1, column=1, sticky=(
+        self._name_entry.grid(row=1, column=1, sticky=(
             constants.E, constants.W), padx=5, pady=5)
 
         review = ttk.Label(master=self._frame, text="Write the review here")
-        review_entry = ttk.Entry(master=self._frame)
+        self._review_entry = ttk.Entry(master=self._frame)
 
         review.grid(padx=5, pady=5, sticky=(constants.W))
-        review_entry.grid(row=2, column=1, sticky=(
+        self._review_entry.grid(row=2, column=1, sticky=(
             constants.E, constants.W), padx=5, pady=5)
 
         button1 = ttk.Button(master=self._frame, text="Ok",
-                             command=self._handle_review)
+                             command=self._create_review_handler)
 
         button1.grid(columnspan=2, sticky=(
             constants.E, constants.W), padx=5, pady=5)

@@ -1,4 +1,3 @@
-from email import message
 from tkinter import ttk, constants, StringVar, messagebox
 from services.service import SERVICE, UsernameExistsError
 
@@ -11,8 +10,6 @@ class CreateUserView:
         self._frame = None
         self._username_entry = None
         self._password_entry = None
-        self._created_variable = None
-        self._created_label = None
 
         self._initialize()
 
