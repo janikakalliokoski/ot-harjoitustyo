@@ -3,7 +3,7 @@
 Sovellus, jossa käyttäjä voi kirjata ylös missä ravintoloissa on käynyt ja antaa niille arvostelut
 
 ## Release
-[linkki releaseen](https://github.com/janikakalliokoski/ot-harjoitustyo/releases/tag/viikko5)
+[linkki release1](https://github.com/janikakalliokoski/ot-harjoitustyo/releases/tag/viikko5)seen
 
 ## Dokumentaatio
 
@@ -14,6 +14,8 @@ Sovellus, jossa käyttäjä voi kirjata ylös missä ravintoloissa on käynyt ja
 [changelog.md](https://github.com/janikakalliokoski/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
 
 [arkkitehtuuri.md](https://github.com/janikakalliokoski/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
+
+[kayttoohje.md](https://github.com/janikakalliokoski/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
 
 ## Asennus
 1. asenna riippuvuudet komennolla poetry install
