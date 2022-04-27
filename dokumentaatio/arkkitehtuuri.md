@@ -17,8 +17,10 @@ Pakkauksen *repositories* luokka UserRepository huolehtii tietojen tallettamises
 ### Tiedostot
 Käyttäjät tallennetaan SQLite-tietokantaan users, joka alustetaan [initialize_database.py](https://github.com/janikakalliokoski/ot-harjoitustyo/blob/master/src/initialize_database.py)-tiedostossa.
 ## Päätoiminnallisuudet
-Sekvenssikaavio käyttäjän sisäänkirjautumisesta:
+### Sekvenssikaavio käyttäjän sisäänkirjautumisesta:
 ![Screenshot](./kuvat/login_sekvenssi.png)
-Kirjautumisnäkymässä kenttiin kirjoitetaan tunnus ja salasana, ja klikataan "Login" painiketta, ja tapahtumankäsittelijä kutsuu sovelluslogiikan ReviewService:n avulla, onko käyttäjätunnusta olemassa, ja jos on, niin täsmääkö salasana. Jos tunnus ja salasana täsmäävät, kirjautuminen onnistuu ja käyttöliittymä vaihtaa näkymäksi ReviewsView:n.
+Kirjautumisnäkymässä kenttiin kirjoitetaan tunnus ja salasana, ja klikataan "Login" painiketta, ja [tapahtumankäsittelijä](https://github.com/janikakalliokoski/ot-harjoitustyo/blob/master/src/ui/login.py#L16) kutsuu sovelluslogiikan ReviewService:n metodin [login](https://github.com/janikakalliokoski/ot-harjoitustyo/blob/master/src/services/service.py#L36) avulla, onko käyttäjätunnusta olemassa, ja jos on, niin täsmääkö salasana. Jos tunnus ja salasana täsmäävät, kirjautuminen onnistuu ja käyttöliittymä vaihtaa näkymäksi ReviewsView:n.
 
-Sekvenssikaavio käyttäjän luomisesta:
+### Sekvenssikaavio käyttäjän luomisesta:
+![Screenshot](./kuvat/create_user_sekvenssi.png)
+Kun käyttäjän luomisnäkymässä on syötetty käyttäjätunnus, joka ei ole vielä käytössä, sekä salasana, jonka jälkeen klikataan painiketta "Create", kutsuu [tapahtumankäsittelijän](https://github.com/janikakalliokoski/ot-harjoitustyo/blob/master/src/ui/create_user.py#L16) metodia [create_user](https://github.com/janikakalliokoski/ot-harjoitustyo/blob/master/src/services/service.py#L81) antaen parametreiksi luotavan käyttäjän tiedot. Sovelluslogiikka selvittää [UserRepository](https://github.com/janikakalliokoski/ot-harjoitustyo/blob/master/src/repositories/user_repository.py):n avulla, onko käyttäjätunnus jo olemassa. Jos ei, luo sovellus User-olion ja tallentaa sen kutsumalla [UserRepository](https://github.com/janikakalliokoski/ot-harjoitustyo/blob/master/src/repositories/user_repository.py):n metodia [create_user](https://github.com/janikakalliokoski/ot-harjoitustyo/blob/master/src/repositories/user_repository.py#L22). Tämän jälkeen käyttäjä saa ilmoituksen, kun käyttäjä on luotu onnistuneesti ja voi palata kirjautumisnäkymään painamalla painiketta "Back" ja siitä edelleen kirjautua sisään.
