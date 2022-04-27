@@ -16,4 +16,5 @@
 |       |  0,5  | create review näkymä                                  |
 |       |   1   | nostettu testikattavuutta                             |
 |       |  0,5  | arkkitehtuurikuvausta                                 |
-| yht:  |  21   |                                                       |
+| 27.4. |  2,5  | dokumentaatio                                         |
+| yht:  |  23,5 |                                                       |
