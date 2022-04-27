@@ -3,7 +3,7 @@
 Sovellus, jossa käyttäjä voi kirjata ylös missä ravintoloissa on käynyt ja antaa niille arvostelut
 
 ## Release
-[linkki release1](https://github.com/janikakalliokoski/ot-harjoitustyo/releases/tag/viikko5)seen
+[linkki release1](https://github.com/janikakalliokoski/ot-harjoitustyo/releases/tag/viikko5):seen
 
 ## Dokumentaatio
 
