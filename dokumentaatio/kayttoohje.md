@@ -8,7 +8,7 @@ Lataa projektin viimeisimmän [releasen](https://github.com/janikakalliokoski/ot
 ## Kirjautuminen
 Sovellus käynnistyy kirjautumisnäkymään:
 
-![Screenshot]
+![Screenshot](.kuvat/dokumentaatio/login.png)
 
 Jos on olemassaoleva käyttäjätunnus, tunnus ja salasana kirjoitetaan syötekenttiin ja painamalla "Login"-painiketta, pääsee kirjautumaan sisään.
 ## Uuden käyttäjän luominen
