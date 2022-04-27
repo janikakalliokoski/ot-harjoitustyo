@@ -1,9 +1,17 @@
 class User:
-    # luokka kuvaa yksittäistä käyttäjää.
+    """Tämä luokka kuvaa yksittäistä käyttäjää.
+
+    Attributes:
+        username: merkkijonoarvo, joka kuvaa käyttäjän käyttäjäyunnusta.
+        password: merkkijonoarvo, joka kuvaa käyttäjän tunnukseen liitettyä salasanaa.
+    """
+
     def __init__(self, username, password):
-        # konstruktori luo uuden käyttäjän
+        """Luokan konstruktori, joka luo uuden käyttäjän.
+
+        Args:
+            username (str): kuvaa käyttäjän käyttäjätunnusta.
+            password (str): kuvaa käyttäjän tunnukseen liitettyä salasanaa.
+        """
         self.username = username
         self.password = password
-    # attribuutti username kuvaa käyttäjän käyttäjätunnusta
-    # attribuutti password kuvaa käyttäjän salasanaa
-    # molemmat attribuutit ovat merkkijonoja

@@ -14,22 +14,40 @@ class UsernameExistsError(Exception):
     pass
 
 
-class EmptyLines(Exception):
-    pass
-
-# tämä luokka vastaa sovelluslogiikasta
-
-
 class ReviewService:
-    # tämä luokka vastaa sovelluslogiikasta
+    """Sovelluslogiikasta vastaava luokka.
+    """
+
     def __init__(
             self,
             user_repository=default_user_repository
     ):
+        """Luokan konstruktori, joka luo uuden sovelluslogiikasta vastaavan palvelun.
+
+        Args:
+            user_repository (UserRepository):
+                        Vapaaehtoinen, oletusarvoltaan UserRepository-olio.
+                        Olio, jolla on UserRepository-luokkaa vastaavat metodit.
+        """
+
         self._user = None
         self._user_repository = user_repository
 
     def login(self, username, password):
+        """Kirjaa käyttäjän sisään.
+
+        Args:
+            username (str): kuvaa kirjautuvan käyttäjän käyttäjätunnusta.
+            password (str): Kuvaa kirjautuvan käyttäjän salasanaa.
+
+        Raises:
+            InvalidCredentialsError:
+                        Virhe, joka tapahtuu, jos käyttäjätunnus ja salasana eivät täsmää.
+
+        Returns:
+            User: kirjautunut käyttäjä.
+        """
+
         user = self._user_repository.find_by_username(username)
         if not user or user.password != password:
             raise InvalidCredentialsError("Invalid username or password")
@@ -37,15 +55,45 @@ class ReviewService:
         return user
 
     def get_current_user(self):
+        """Palauttaa kirjautuneen käyttäjän.
+
+        Returns:
+            User: kirjautunut käyttäjä.
+        """
+
         return self._user
 
     def get_all_users(self):
+        """Palauttaa kaikki käyttäjät jotka löytyvät tietokannasta.
+
+        Returns:
+            list: lista kaikista käyttäjistä User-olioina
+        """
+
         return self._user_repository.find_users()
 
     def logout(self):
+        """Kirjaa nykyisen käyttäjän ulos.
+        """
+
         self._user = None
 
     def create_user(self, username: str, password: str, login=True):
+        """Luo uuden käyttäjän ja tarvittaessa kirjaa käyttäjän sisään.
+
+        Args:
+            username (str): kuvaa käyttäjän käyttäjätunnusta.
+            password (str): kuvaa käyttäjän käyttäjätunnuksen salasanaa.
+            login (bool): vapaaehtoinen, oletusarvoltaan True.
+                          kertoo, kirjataanko käyttäjä sisään onnistuneen luonnin jälkeen.
+
+        Raises:
+            UsernameExistsError: virhe, joka tapahtuu jos käyttäjätunnus löytyy jo tietokannasta.
+
+        Returns:
+            User: luotu käyttäjä.
+        """
+
         existing = self._user_repository.find_by_username(username)
 
         if existing:

@@ -1,4 +1,4 @@
-from tkinter import ttk, constants, StringVar, messagebox
+from tkinter import ttk, constants, messagebox
 from services.service import SERVICE, UsernameExistsError
 
 

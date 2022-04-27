@@ -1,11 +1,29 @@
-# luokka yksittäisestä arviosta
-# attribuutteina ravintolan nimi, arvostelu,
-# User-olio joka kuvaa tehtävän omistajaa ja
+import uuid
+
 
 class Review:
-    def __init__(self, restaurant, review, user=None):
+    """Tämä luokka kuvaa yksittäistä arviota
+
+    Attributes:
+        restaurant: merkkijonoarvo, joka kuvaa käydyn ravintolan nimeä.
+        review: merkkijonoarvo, joka kuvaa käydyn ravintolan arvostelua.
+        user: User-olio, joka kuvaa arvostelun omistavaa käyttäjää.
+        review_id: merkkijonoarvo, joka kuvaa arvostelun id:tä.
+    """
+
+    def __init__(self, restaurant, review, user=None, review_id=None):
+        """Luokan konstruktori, joka luo uuden arvion.
+
+        Args:
+            restaurant (str): kuvaa käydyn ravintolan nimeä.
+            review (str): kuvaa käydyn ravintolan arvostelua.
+            user (User): vapaaehtoinen, oletusarvoltaan None.
+                         kuvaa arvostelun omistavaa käyttäjää.
+            review_id (str): vapaaehtoinen, oletusarvoltaan generoitu uuid.
+                             kuvaa tehtävän id:tä
+        """
+
         self.restaurant = restaurant
         self.review = review
         self.user = user
-
-# konstruktori luo uuden arvostelun
+        self.id = review_id or str(uuid.uuid4())
