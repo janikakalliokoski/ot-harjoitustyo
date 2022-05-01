@@ -1,9 +1,9 @@
 # Arkkitehtuurikuvaus
-## Rakenne
+## Sovelluksen akenne
 Ohjelman osien suhdetta kuvaava pakkauskaavio:
 ![Screenshot](./kuvat/arkkitehtuuri.png)
 
-Pakkaus *ui* sisältää käyttöliittymästä, *services* sovelluslogiikasta ja *repositories* tietojen pysyväistallennuksesta vastaavan koodin. Pakkaus *entities* sisältää luokat *User* ja *Review*, jotka kuvastavat sovelluksen käyttämiä tietokohteita.
+Pakkaus *ui* sisältää käyttöliittymästä, *services* sovelluslogiikasta ja *repositories* tietojen pysyväistallennuksesta vastaavat tiedostot. Pakkaus *entities* sisältää luokat *User* ja *Review*, jotka kuvastavat sovelluksen käyttämiä tietokohteita.
 ## Käyttöliittymä
 Käyttöliittymä sisältää neljä erillistä näkymää:
 - kirjautuminen
@@ -11,9 +11,9 @@ Käyttöliittymä sisältää neljä erillistä näkymää:
 - lista arvosteluista
 - uuden arvostelun luonti
 
-Nämä kaikki on toteutettu omana luokkanaan, ja näkymistä yksi on kerrallaan näkyvissä. Näkymien välillä vaihtamisesta vastaa [UI](https://github.com/janikakalliokoski/ot-harjoitustyo/blob/master/src/ui/ui.py)-luokka. Käyttöliittymä on eriytetty sovellusluokasta, ja se ainoastaan kutsuu [ReviewService](https://github.com/janikakalliokoski/ot-harjoitustyo/blob/master/src/services/service.py)-luokan metodeja
+Nämä kaikki on toteutettu omana luokkanaan, ja vain yksi näkymistä on kerrallaan auki. Näkymien välillä vaihtamisesta vastaa [UI](https://github.com/janikakalliokoski/ot-harjoitustyo/blob/master/src/ui/ui.py)-luokka. Käyttöliittymä on eriytetty sovelluslogiikasta, ja se ainoastaan kutsuu [ReviewService](https://github.com/janikakalliokoski/ot-harjoitustyo/blob/master/src/services/service.py)-luokan metodeja.
 ## Tietojen pysyväistallennus
-Pakkauksen *repositories* luokka UserRepository huolehtii tietojen tallettamisesta, ja tallentaa tietoa SQLite-tietokantaan.
+Pakkauksen *repositories* luokka UserRepository huolehtii tietojen tallettamisesta, ja tallettaa tiedot käyttäjistä SQLite-tietokantaan.
 ### Tiedostot
 Käyttäjät tallennetaan SQLite-tietokantaan users, joka alustetaan [initialize_database.py](https://github.com/janikakalliokoski/ot-harjoitustyo/blob/master/src/initialize_database.py)-tiedostossa.
 ## Päätoiminnallisuudet
