@@ -19,7 +19,7 @@ Sovellus, jossa käyttäjä voi kirjata ylös missä ravintoloissa on käynyt ja
 
 ## Asennus
 1. asenna riippuvuudet komennolla poetry install
-2. suorita vaadittavat alustustoimenpiteet komennolla poetry run invoke start
+2. suorita vaadittavat alustustoimenpiteet komennolla poetry run invoke build
 3. käynnistä sovellus komennolla poetry run invoke start
 
 ## Komentorivitoiminnot
