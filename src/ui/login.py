@@ -1,4 +1,4 @@
-from tkinter import ttk, constants, StringVar, messagebox
+from tkinter import ttk, constants, messagebox
 from services.service import SERVICE, InvalidCredentialsError
 
 
@@ -33,23 +33,23 @@ class LoginView:
     def _initialize(self):
         self._frame = ttk.Frame(master=self._root)
 
-        heading_label = ttk.Label(master=self._frame, text="Login")
+        heading_label = ttk.Label(master=self._frame, text="Login here")
 
-        heading_label.grid(columnspan=2, sticky=constants.W, padx=5, pady=5)
+        heading_label.grid(columnspan=1, sticky=constants.EW, padx=2, pady=2)
 
-        username = ttk.Label(master=self._frame, text="Username")
+        username = ttk.Label(master=self._frame, text="Username:")
         self._username_entry = ttk.Entry(master=self._frame)
 
-        username.grid(row=2, padx=5, pady=5)
+        username.grid(row=2, padx=2, pady=2)
         self._username_entry.grid(row=2, column=1, sticky=(
-            constants.E, constants.W), padx=5, pady=5)
+            constants.E, constants.W), padx=2, pady=2)
 
-        password = ttk.Label(master=self._frame, text="Password")
+        password = ttk.Label(master=self._frame, text="Password:")
         self._password_entry = ttk.Entry(master=self._frame, show="*")
 
-        password.grid(padx=5, pady=5)
+        password.grid(padx=2, pady=2)
         self._password_entry.grid(row=3, column=1, sticky=(
-            constants.E, constants.W), padx=5, pady=5)
+            constants.E, constants.W), padx=2, pady=2)
 
         button = ttk.Button(master=self._frame, text="Login",
                             command=self._login_handler)
@@ -58,6 +58,7 @@ class LoginView:
 
         button.grid(columnspan=2, sticky=(
             constants.E, constants.W), padx=5, pady=5)
+
         button2.grid(columnspan=2, sticky=(
             constants.E, constants.W), padx=5, pady=5)
 

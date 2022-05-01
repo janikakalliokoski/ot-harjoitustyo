@@ -32,22 +32,22 @@ class CreateReviewview:
 
         heading = ttk.Label(master=self._frame, text="Create review")
 
-        heading.grid(columnspan=2, sticky=constants.W, padx=5, pady=5)
+        heading.grid(columnspan=2, sticky=constants.W, padx=2, pady=2)
 
         name = ttk.Label(master=self._frame,
-                         text="Name of the restaurant visited")
+                         text="Name of the restaurant visited:")
         self._name_entry = ttk.Entry(master=self._frame)
 
-        name.grid(padx=5, pady=5)
+        name.grid(padx=2, pady=2)
         self._name_entry.grid(row=1, column=1, sticky=(
-            constants.E, constants.W), padx=5, pady=5)
+            constants.E, constants.W), padx=2, pady=2)
 
-        review = ttk.Label(master=self._frame, text="Write the review here")
+        review = ttk.Label(master=self._frame, text="Write the review here:")
         self._review_entry = ttk.Entry(master=self._frame)
 
-        review.grid(padx=5, pady=5, sticky=(constants.W))
+        review.grid(padx=2, pady=2, sticky=(constants.W))
         self._review_entry.grid(row=2, column=1, sticky=(
-            constants.E, constants.W), padx=5, pady=5)
+            constants.E, constants.W), padx=2, pady=2)
 
         button1 = ttk.Button(master=self._frame, text="Ok",
                              command=self._create_review_handler)

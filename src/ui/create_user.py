@@ -50,23 +50,23 @@ class CreateUserView:
 
         heading = ttk.Label(master=self._frame, text="Create user")
 
-        heading.grid(columnspan=2, sticky=constants.W, padx=5, pady=5)
+        heading.grid(columnspan=2, sticky=constants.W, padx=2, pady=2)
 
         username = ttk.Label(master=self._frame,
-                             text="Username (min. 5 characters)")
+                             text="Username: (min. 5 characters)")
         self._username_entry = ttk.Entry(master=self._frame)
 
-        username.grid(row=1, padx=5, pady=5)
+        username.grid(row=1, padx=2, pady=2)
         self._username_entry.grid(row=1, column=1, sticky=(
-            constants.E, constants.W), padx=5, pady=5)
+            constants.E, constants.W), padx=2, pady=2)
 
         password = ttk.Label(master=self._frame,
-                             text="Password (min. 6 characters)")
+                             text="Password: (min. 6 characters)")
         self._password_entry = ttk.Entry(master=self._frame, show="*")
 
-        password.grid(padx=5, pady=5)
+        password.grid(padx=2, pady=2)
         self._password_entry.grid(row=2, column=1, sticky=(
-            constants.E, constants.W), padx=5, pady=5)
+            constants.E, constants.W), padx=2, pady=2)
 
         button = ttk.Button(master=self._frame,
                             text="Create user", command=self._create_user_handler)

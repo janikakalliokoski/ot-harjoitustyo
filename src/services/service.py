@@ -45,7 +45,7 @@ class ReviewService:
                         Virhe, joka tapahtuu, jos käyttäjätunnus ja salasana eivät täsmää.
 
         Returns:
-            User: kirjautunut käyttäjä.
+            User: kirjautunut käyttäjä jos se löytyy tietokannasta.
         """
 
         user = self._user_repository.find_by_username(username)
