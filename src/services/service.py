@@ -1,5 +1,4 @@
 from entities.user import User
-from entities.review import Review
 
 from repositories.user_repository import (
     User_repository as default_user_repository
@@ -28,16 +27,13 @@ class UsernameExistsError(Exception):
     pass
 
 
-class ReviewExistsError(Exception):
-    pass
-
-
 class ReviewService:
     """Sovelluslogiikasta vastaava luokka.
     """
 
     def __init__(
             self,
+
             user_repository=default_user_repository,
             review_repository=default_review_repository
     ):
@@ -47,6 +43,9 @@ class ReviewService:
             user_repository (UserRepository):
                         Vapaaehtoinen, oletusarvoltaan UserRepository-olio.
                         Olio, jolla on UserRepository-luokkaa vastaavat metodit.
+            review_repository (ReviewRepository):
+                        Vapaaehtoinen, oletusarvoltaan ReviewRepository-olio.
+                        Olio, jolla on ReviewRepository-luokkaa vastaavat metodit.
         """
 
         self._user = None
@@ -131,15 +130,8 @@ class ReviewService:
 
         return reviews
 
-    def create_review(self, restaurant, review, rate):
-        exsists = self._review_repository.find_by_name(restaurant)
-
-        if exsists:
-            raise ReviewExistsError(
-                f"Review of restaurant {restaurant} already exists")
-
-        new = self._review_repository.create_review(
-            Review(restaurant, review, rate))
+    def create_review(self, review):
+        new = self._review_repository.create_review(review)
 
         return new
 

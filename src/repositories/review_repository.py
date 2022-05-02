@@ -9,24 +9,18 @@ def get_review_by_row(row):
         row
     """
 
-    return Review(row["restaurant"], row["review"], row["rate"]) if row else None
+    return Review(row["restaurant"], row["review"], row["rate"], row["user"]) if row else None
 
 
 class ReviewRepository:
     def __init__(self, connection):
         self._connection = connection
 
-    def change_type(self, review):
-        if not review:
-            return None
-
-        res = Review(review[0], review[1], review[2])
-        res.set_user(review[3])
-
     def create_review(self, review):
         cursor = self._connection.cursor()
 
-        cursor.execute("insert into reviews (restaurant, review, rate, user) values (?,?,?,?)",
+        cursor.execute(
+            "insert or ignore into reviews (restaurant, review, rate, user) values (?,?,?,?)",
                        (review.restaurant, review.review, review.rate, review.user))
 
         self._connection.commit()
@@ -34,18 +28,26 @@ class ReviewRepository:
 
     def find_reviews_by_user(self, user):
         cursor = self._connection.cursor()
-        cursor.execute("select * from reviews where user = ?", (user.user_id,))
+        cursor.execute(
+            "select * from reviews where (user) = (?,?)", (user.username))
         reviews = cursor.fetchall()
         return list(map(get_review_by_row, reviews))
 
-    def find_by_name(self, restaurant):
+    def find_by_restaurant(self, restaurant):
         cursor = self._connection.cursor()
         cursor.execute(
             "select * from reviews where restaurant = ?",
             (restaurant,)
         )
-        user = cursor.fetchone()
-        return get_review_by_row(user)
+        restaurant = cursor.fetchone()
+        return get_review_by_row(restaurant)
+
+    def find_by_restaurant_and_user(self, restaurant, user):
+        cursor = self._connection.cursor()
+        cursor.execute(
+            "select * from reviews, users where restaurant=? and user=?", [restaurant, user])
+        review = cursor.fethcone()
+        return get_review_by_row(review)
 
     def find_reviews(self):
         cursor = self._connection.cursor()
@@ -56,7 +58,7 @@ class ReviewRepository:
     def delete_reviews(self):
         cursor = self._connection.cursor()
 
-        cursor.execute("delete from items")
+        cursor.execute("delete from reviews")
 
         self._connection.commit()
 

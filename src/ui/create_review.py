@@ -1,16 +1,17 @@
 from tkinter import ttk, constants, messagebox
+from services.service import SERVICE
 from entities.review import Review
-from services.service import SERVICE, ReviewExistsError
 
 
 class CreateReviewview:
-    def __init__(self, root, handle_review):
+    def __init__(self, root, handle_review, user=None):
         self._root = root
         self._handle_review = handle_review
         self._frame = None
         self._name_entry = None
         self._review_entry = None
         self._rating_entry = None
+        self._user = user
 
         self._initialize()
 
@@ -25,24 +26,31 @@ class CreateReviewview:
         review = self._review_entry.get()
         rate = self._rating_entry.get()
 
-        rates = ["1", "2", "3", "4", "5"]
+        rates = ["", "1", "2", "3", "4", "5"]
+
+        empty = []
+
+        if len(name) == 0 or len(review) == 0 or len(rate) == 0:
+            empty.append(1)
 
         if rate not in rates:
             messagebox.showerror(
                 "error in rate", "Rate should be between 1 and 5")
             return
-        if len(name) == 0 or len(review) == 0 or len(rate) == 0:
-            messagebox.showerror(
-                "empty lines", "Name, review and rate required")
-            return
 
-        try:
-            SERVICE.create_review(name, review, rate)
-            self._handle_review()
-            messagebox.showinfo("review created!", "Review created!")
-        except ReviewExistsError:
+        new = Review(name, review, rate)
+
+        if len(empty) != 0:
             messagebox.showerror(
-                "already exists", f"Review of restaurant {name} already exists")
+                "empty lines", "Please fill in all the lines")
+        elif len(empty) == 0:
+            SERVICE.create_review(new)
+            messagebox.showinfo("review created", "Review created!")
+            self._name_entry.delete(0, "end")
+            self._review_entry.delete(0, "end")
+            self._rating_entry.delete(0, "end")
+
+        return new
 
     def _initialize(self):
         self._frame = ttk.Frame(master=self._root)
