@@ -17,4 +17,9 @@
 |       |   1   | nostettu testikattavuutta                             |
 |       |  0,5  | arkkitehtuurikuvausta                                 |
 | 27.4. |  2,5  | dokumentaatio                                         |
-| yht:  |  23,5 |                                                       |
+| 1.5.  |   1   | refaktorointi                                         |
+| 2.5.  |   1   | ui tiedostojen muokkaus                               |
+|       |   0,5 | arvioille oma tietokanta                              |
+|       |  2,5  | arvioiden tallettaminen tietokantaan                  |
+|       |  0,5  | arvioihin arvostelu 1-5                               |
+| yht:  |  28   |                                                       |
