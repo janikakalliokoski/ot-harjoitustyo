@@ -2,16 +2,6 @@ from entities.review import Review
 from database_connection import get_database_connection
 
 
-def get_id_by_row(row):
-    """hakee arvostelun id arvon
-
-    Args:
-        row
-    """
-
-    return row["id"] if row else None
-
-
 def get_review_by_row(row):
     """hakee arvostelun nimellä
 

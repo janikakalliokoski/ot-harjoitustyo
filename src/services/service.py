@@ -131,7 +131,7 @@ class ReviewService:
 
         return reviews
 
-    def create_review(self, review, restaurant, rate):
+    def create_review(self, restaurant, review, rate):
         exsists = self._review_repository.find_by_name(restaurant)
 
         if exsists:
@@ -139,7 +139,7 @@ class ReviewService:
                 f"Review of restaurant {restaurant} already exists")
 
         new = self._review_repository.create_review(
-            Review(review, restaurant, rate))
+            Review(restaurant, review, rate))
 
         return new
 

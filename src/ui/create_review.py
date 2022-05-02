@@ -42,7 +42,7 @@ class CreateReviewview:
             messagebox.showinfo("review created!", "Review created!")
         except ReviewExistsError:
             messagebox.showerror(
-                "already exists", f"Review of restaurant {review} already exists")
+                "already exists", f"Review of restaurant {name} already exists")
 
     def _initialize(self):
         self._frame = ttk.Frame(master=self._root)
