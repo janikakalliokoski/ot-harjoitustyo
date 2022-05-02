@@ -14,12 +14,12 @@ Sovellus koostuu neljästä eri käyttöliittymästä. Kirjautumisnäkymä johon
 ### Kirjautumisen jälkeen
 - Käyttäjä näkee listauksen ravintoloista joissa on käynyt ja niille antamansa arvostelut
 - Käyttäjä voi luoda uuden ravintola-arvostelun TEHTY
+- Arvostelulle annetaan arvio 1-5 TEHTY
 - Käyttäjä voi kirjautua ulos järjestelmästä TEHTY
 ## Jatkokehitysideoita
 Perusversiota voi laajentaa esimerkiksi seuraavasti:
 - Arvosteluiden editointi
 - Arvosteluiden poistaminen
-- 1-5 tähden antaminen ravintolalle
 - Ravintoloiden järjestäminen parhaimmasta huonoimpaan arvosteluiden mukaan
 - Käyttäjätunnuksen poisto
 - Muut käyttäjät näkevät toisten käyttäjien tekemät arvostelut
