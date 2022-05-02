@@ -19,9 +19,9 @@ class ReviewsView:
     def _initialize(self):
         self._frame = ttk.Frame(master=self._root)
 
-        heading = ttk.Label(master=self._frame,
-                            text="Reviews of restaurants visited")
-        heading.grid(columnspan=2, sticky=constants.W, padx=5, pady=5)
+        label = ttk.Label(master=self._frame,
+                            text="Reviews of restaurants visited", foreground="deep pink", font=("Times 20 bold"))
+        label.grid(columnspan=2, sticky=constants.EW, padx=2, pady=2)
 
         button = ttk.Button(master=self._frame,
                             text="Log out", command=self._handle_login)

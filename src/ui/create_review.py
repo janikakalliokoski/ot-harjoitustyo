@@ -1,4 +1,4 @@
-from tkinter import ttk, constants, messagebox
+from tkinter import font, ttk, constants, messagebox
 
 
 class CreateReviewview:
@@ -30,19 +30,19 @@ class CreateReviewview:
     def _initialize(self):
         self._frame = ttk.Frame(master=self._root)
 
-        heading = ttk.Label(master=self._frame, text="Create review")
+        label = ttk.Label(master=self._frame, text="Create a review", foreground="deep pink", font=("Times 20 bold"))
 
-        heading.grid(columnspan=2, sticky=constants.W, padx=2, pady=2)
+        label.grid(columnspan=2, sticky=constants.EW, padx=2, pady=2)
 
         name = ttk.Label(master=self._frame,
-                         text="Name of the restaurant visited:")
+                         text="Name of the restaurant visited:", foreground="deep pink", font=("Times 15"))
         self._name_entry = ttk.Entry(master=self._frame)
 
-        name.grid(padx=2, pady=2)
+        name.grid(row=1, padx=2, pady=2)
         self._name_entry.grid(row=1, column=1, sticky=(
-            constants.E, constants.W), padx=2, pady=2)
+            constants.EW), padx=2, pady=2)
 
-        review = ttk.Label(master=self._frame, text="Write the review here:")
+        review = ttk.Label(master=self._frame, text="Write the review here:", foreground="deep pink", font=("Times 15"))
         self._review_entry = ttk.Entry(master=self._frame)
 
         review.grid(padx=2, pady=2, sticky=(constants.W))
