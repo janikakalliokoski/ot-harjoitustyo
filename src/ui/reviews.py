@@ -20,7 +20,7 @@ class ReviewsView:
         self._frame = ttk.Frame(master=self._root)
 
         label = ttk.Label(master=self._frame,
-                            text="Reviews of restaurants visited", foreground="deep pink", font=("Times 20 bold"))
+                          text="Reviews of restaurants visited", foreground="deep pink", font=("Times 20 bold"))
         label.grid(columnspan=2, sticky=constants.EW, padx=2, pady=2)
 
         button = ttk.Button(master=self._frame,

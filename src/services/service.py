@@ -1,16 +1,34 @@
 from entities.user import User
-#from entities.review import Review
+from entities.review import Review
 
 from repositories.user_repository import (
     User_repository as default_user_repository
 )
 
+from repositories.review_repository import (
+    review_repository as default_review_repository
+)
+
 
 class InvalidCredentialsError(Exception):
+    """luokka, joka tuottaa virheen jos käyttäjänimi ja/tai salasana on virheellinen.
+
+    Args:
+        Exception
+    """
     pass
 
 
 class UsernameExistsError(Exception):
+    """luokka, joka tuottaa virheen jos käyttäjätunnus on valmiiksi jo olemassa
+
+    Args:
+        Exception
+    """
+    pass
+
+
+class ReviewExistsError(Exception):
     pass
 
 
@@ -20,7 +38,8 @@ class ReviewService:
 
     def __init__(
             self,
-            user_repository=default_user_repository
+            user_repository=default_user_repository,
+            review_repository=default_review_repository
     ):
         """Luokan konstruktori, joka luo uuden sovelluslogiikasta vastaavan palvelun.
 
@@ -32,6 +51,7 @@ class ReviewService:
 
         self._user = None
         self._user_repository = user_repository
+        self._review_repository = review_repository
 
     def login(self, username, password):
         """Kirjaa käyttäjän sisään.
@@ -105,6 +125,23 @@ class ReviewService:
             self._user = user
 
         return user
+
+    def find_reviews_by_user(self, user):
+        reviews = self._review_repository.find_reviews_by_user(user)
+
+        return reviews
+
+    def create_review(self, review, restaurant, rate):
+        exsists = self._review_repository.find_by_name(restaurant)
+
+        if exsists:
+            raise ReviewExistsError(
+                f"Review of restaurant {restaurant} already exists")
+
+        new = self._review_repository.create_review(
+            Review(review, restaurant, rate))
+
+        return new
 
 
 SERVICE = ReviewService()

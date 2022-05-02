@@ -6,7 +6,7 @@ class User:
         password: merkkijonoarvo, joka kuvaa käyttäjän tunnukseen liitettyä salasanaa.
     """
 
-    def __init__(self, username, password):
+    def __init__(self, username, password, user_id=None):
         """Luokan konstruktori, joka luo uuden käyttäjän.
 
         Args:
@@ -15,3 +15,7 @@ class User:
         """
         self.username = username
         self.password = password
+        self.user_id = user_id
+
+    def set_user_id(self, user_id):
+        self.user_id = user_id

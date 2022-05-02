@@ -12,6 +12,11 @@ def drop_tables(connection):
     cursor.execute('''
         drop table if exists users;
     ''')
+
+    cursor.execute('''
+        drop table if exists reviews;
+    ''')
+
     connection.commit()
 
 
@@ -29,6 +34,16 @@ def create_tables(connection):
             password text
         );
     ''')
+
+    cursor.execute('''
+        create table reviews (
+            restaurant text primary key,
+            review text,
+            rate text,
+            user integer references users
+        );
+    ''')
+
     connection.commit()
 
 

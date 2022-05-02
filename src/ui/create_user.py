@@ -48,7 +48,8 @@ class CreateUserView:
     def _initialize(self):
         self._frame = ttk.Frame(master=self._root)
 
-        label = ttk.Label(master=self._frame, text="Create an user", foreground="deep pink", font=("Times 20 bold"))
+        label = ttk.Label(master=self._frame, text="Create an user",
+                          foreground="deep pink", font=("Times 20 bold"))
 
         label.grid(columnspan=2, sticky=constants.EW, padx=2, pady=2)
 

@@ -11,12 +11,13 @@ class Review:
         review_id: merkkijonoarvo, joka kuvaa arvostelun id:tä.
     """
 
-    def __init__(self, restaurant, review, user=None, review_id=None):
+    def __init__(self, restaurant, review, rate, user=None, review_id=None):
         """Luokan konstruktori, joka luo uuden arvion.
 
         Args:
             restaurant (str): kuvaa käydyn ravintolan nimeä.
             review (str): kuvaa käydyn ravintolan arvostelua.
+            starts (str): kuvaa kuinka monta tähteä (1-5) käyttäjä antaa ravintolalle.
             user (User): vapaaehtoinen, oletusarvoltaan None.
                          kuvaa arvostelun omistavaa käyttäjää.
             review_id (str): vapaaehtoinen, oletusarvoltaan generoitu uuid.
@@ -25,5 +26,9 @@ class Review:
 
         self.restaurant = restaurant
         self.review = review
+        self.rate = rate
         self.user = user
         self.id = review_id or str(uuid.uuid4())
+
+    def set_user(self, user):
+        self._user = user

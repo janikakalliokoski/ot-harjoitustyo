@@ -34,17 +34,21 @@ class LoginView:
     def _initialize(self):
         self._frame = ttk.Frame(master=self._root)
 
-        label = ttk.Label(master=self._frame, text="Login or create an user", foreground="deep pink", font=("Times 20 bold"))
+        label = ttk.Label(master=self._frame, text="Login or create an user",
+                          foreground="deep pink", font=("Times 20 bold"))
 
         label.grid(columnspan=2, sticky=constants.EW, padx=2, pady=2)
 
-        username = ttk.Label(master=self._frame, text="Username:", foreground="deep pink", font="Times 15")
+        username = ttk.Label(master=self._frame, text="Username:",
+                             foreground="deep pink", font="Times 15")
         self._username_entry = ttk.Entry(master=self._frame)
 
         username.grid(row=1, padx=2, pady=2)
-        self._username_entry.grid(row=1, column=1, sticky=(constants.EW), padx=2, pady=2)
+        self._username_entry.grid(
+            row=1, column=1, sticky=(constants.EW), padx=2, pady=2)
 
-        password = ttk.Label(master=self._frame, text="Password:", foreground="deep pink", font="Times 15")
+        password = ttk.Label(master=self._frame, text="Password:",
+                             foreground="deep pink", font="Times 15")
         self._password_entry = ttk.Entry(master=self._frame, show="*")
 
         password.grid(padx=2, pady=2)
