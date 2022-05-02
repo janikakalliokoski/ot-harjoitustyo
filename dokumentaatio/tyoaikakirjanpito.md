@@ -19,7 +19,7 @@
 | 27.4. |  2,5  | dokumentaatio                                         |
 | 1.5.  |   1   | refaktorointi                                         |
 | 2.5.  |   1   | ui tiedostojen muokkaus                               |
-|       |   0,5 | arvioille oma tietokanta                              |
-|       |  2,5  | arvioiden tallettaminen tietokantaan                  |
+|       |  0,5  | arvioille oma tietokanta                              |
+|       |  4    | arvioiden tallettaminen tietokantaan                  |
 |       |  0,5  | arvioihin arvostelu 1-5                               |
-| yht:  |  28   |                                                       |
+| yht:  |  29,5 |                                                       |
