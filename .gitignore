@@ -4,3 +4,10 @@ __pycache__
 htmlcov
 tests.db
 users.db
+
+#datafiles
+data/database.sqlite
+data/test-database.sqlite
+dbs/tests.db
+dbs/users.db
+dbs
