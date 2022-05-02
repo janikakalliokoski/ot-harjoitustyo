@@ -23,3 +23,4 @@
 - tekstien fontteja ja värjeä muutettu
 - arvioille oma tietokanta
 - arviot tallentuvat omaan tietokantaansa
+- käyttäjä saa virheilmoituksen jos jättää tyhjiksi arvioiden kenttiä
