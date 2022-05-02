@@ -18,3 +18,8 @@
 - testeille oma testitietokanta
 - create review näkymä
 - virheilmoitukset messageboxeihin
+
+## Viikko 6
+- tekstien fontteja ja värjeä muutettu
+- arvioille oma tietokanta
+- arviot tallentuvat omaan tietokantaansa
