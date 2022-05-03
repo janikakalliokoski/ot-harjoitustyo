@@ -1,9 +1,18 @@
 ### Käyttöohje
 Lataa projektin viimeisimmän [releasen](https://github.com/janikakalliokoski/ot-harjoitustyo/releases/tag/viikko5) lähdekoodi valitsemalla *Assets*-osion alta *Source code*.
 ## Ohjelman käynnistäminen
-1. Asenna riippuvuudet komennolla poetry install
-2. Suorita alustustoimenpiteet komennolla poetry run invoke build
-3. Nyt ohjelman voi käynnistää komennolla poetry run invoke start
+1. Asenna riippuvuudet komennolla:
+```bash
+poetry install
+```
+2. Suorita alustustoimenpiteet komennolla:
+```bash
+poetry run invoke build
+```
+3. Nyt ohjelman voi käynnistää komennolla:
+```bash
+poetry run invoke start
+```
 
 ## Kirjautuminen
 Sovellus käynnistyy kirjautumisnäkymään:
