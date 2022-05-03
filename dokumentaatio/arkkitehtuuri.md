@@ -1,5 +1,5 @@
 # Arkkitehtuurikuvaus
-## Sovelluksen akenne
+## Sovelluksen rakenne
 Ohjelman osien suhdetta kuvaava pakkauskaavio:
 ![Screenshot](./kuvat/arkkitehtuuri.png)
 
@@ -13,7 +13,7 @@ Käyttöliittymä sisältää neljä erillistä näkymää:
 
 Nämä kaikki on toteutettu omana luokkanaan, ja vain yksi näkymistä on kerrallaan auki. Näkymien välillä vaihtamisesta vastaa [UI](https://github.com/janikakalliokoski/ot-harjoitustyo/blob/master/src/ui/ui.py)-luokka. Käyttöliittymä on eriytetty sovelluslogiikasta, ja se kutsuu [ReviewService](https://github.com/janikakalliokoski/ot-harjoitustyo/blob/master/src/services/service.py)-luokan metodeja.
 ## Tietojen pysyväistallennus
-Pakkauksen *repositories* luokka UserRepository huolehtii tietojen tallettamisesta, ja tallettaa tiedot käyttäjistä SQLite-tietokantaan.
+Kansion *repositories* luokka UserRepository huolehtii käyttäjiin liittyvien tietojen tallettamisesta, ja tallettaa ne SQLite-tietokantaan. Kansion *repositories* luokka ReviewRepository huolehtii arvosteluihin liittyvien tietojen tallettamisesta, ja tallettaa ne myöskin SQLite-tietokantaan.
 ### Tietokannat
 Käyttäjät tallennetaan SQLite-tietokantaan users, joka alustetaan [initialize_database.py](https://github.com/janikakalliokoski/ot-harjoitustyo/blob/master/src/initialize_database.py)-tiedostossa. Samoin käyttäjien tekemät arviot tallennetaan SQLite-tietokantaan, reviews, joka alustetaan samassa [initialize_database.py](https://github.com/janikakalliokoski/ot-harjoitustyo/blob/master/src/initialize_database.py)-tiedostossa. 
 ## Päätoiminnallisuudet
