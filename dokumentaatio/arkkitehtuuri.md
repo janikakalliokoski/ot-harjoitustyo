@@ -11,11 +11,11 @@ Käyttöliittymä sisältää neljä erillistä näkymää:
 - lista arvosteluista
 - uuden arvostelun luonti
 
-Nämä kaikki on toteutettu omana luokkanaan, ja vain yksi näkymistä on kerrallaan auki. Näkymien välillä vaihtamisesta vastaa [UI](https://github.com/janikakalliokoski/ot-harjoitustyo/blob/master/src/ui/ui.py)-luokka. Käyttöliittymä on eriytetty sovelluslogiikasta, ja se ainoastaan kutsuu [ReviewService](https://github.com/janikakalliokoski/ot-harjoitustyo/blob/master/src/services/service.py)-luokan metodeja.
+Nämä kaikki on toteutettu omana luokkanaan, ja vain yksi näkymistä on kerrallaan auki. Näkymien välillä vaihtamisesta vastaa [UI](https://github.com/janikakalliokoski/ot-harjoitustyo/blob/master/src/ui/ui.py)-luokka. Käyttöliittymä on eriytetty sovelluslogiikasta, ja se kutsuu [ReviewService](https://github.com/janikakalliokoski/ot-harjoitustyo/blob/master/src/services/service.py)-luokan metodeja.
 ## Tietojen pysyväistallennus
 Pakkauksen *repositories* luokka UserRepository huolehtii tietojen tallettamisesta, ja tallettaa tiedot käyttäjistä SQLite-tietokantaan.
-### Tiedostot
-Käyttäjät tallennetaan SQLite-tietokantaan users, joka alustetaan [initialize_database.py](https://github.com/janikakalliokoski/ot-harjoitustyo/blob/master/src/initialize_database.py)-tiedostossa.
+### Tietokannat
+Käyttäjät tallennetaan SQLite-tietokantaan users, joka alustetaan [initialize_database.py](https://github.com/janikakalliokoski/ot-harjoitustyo/blob/master/src/initialize_database.py)-tiedostossa. Samoin käyttäjien tekemät arviot tallennetaan SQLite-tietokantaan, reviews, joka alustetaan samassa [initialize_database.py](https://github.com/janikakalliokoski/ot-harjoitustyo/blob/master/src/initialize_database.py)-tiedostossa. 
 ## Päätoiminnallisuudet
 ### Sekvenssikaavio käyttäjän sisäänkirjautumisesta:
 ![Screenshot](./kuvat/login_sekvenssi.png)
