@@ -19,14 +19,14 @@ Sovellus käynnistyy kirjautumisnäkymään:
 
 ![Screenshot](./kuvat/login.png)
 
-Jos on olemassaoleva käyttäjätunnus, tunnus ja salasana kirjoitetaan syötekenttiin ja painamalla "Login"-painiketta, pääsee kirjautumaan sisään.
+Jos on tehnyt sovellukseen käyttäjän, voi tunnuksen ja salasanan kirjoittaa niille tarkoitettuihin kenttiin. Jos tunnus vielä puuttuu, sen voi luoda painamalla nappia "Create user", josta siirrytään käyttäjän luomisnäkymään.
+
 ## Uuden käyttäjän luominen
-Kirjautumisnäkymästä voi siirtyä uuden käyttäjän luomisnäkymään painamalla painiketta "Create user".
+Kirjautumisnäkymästä voi siirtyä käyttäjän luomisnäkymään painamalla painiketta "Create user".
 
 ![Screenshot](./kuvat/create_user.png)
 
-Uusi käyttäjä luodaan syöttämällä tiedot syötekenttiin ja painamalla "Create"-painiketta. Jos käyttäjä luotiin onnistuneesti, saa käyttäjä tästä ilmoituksen, ja vastaavasti virhetilanteissa käyttäjä saa ilmoituksen.
-Takaisin kirjautumisnäkymään siirrytään painamalla painiketta "Back".
+Käyttäjä luodaan valitsemalla mieleinen käyttäjätunnus, jossa on vähintään 5 merkkiä, sekä salasana, jossa on vähintään 6 merkkiä. Jos käyttäjätunnus ei ole varattu, voidaan käyttäjä luoda painamalla painiketta "Create user". Jos luonti onnistuu, saa käyttäjä tästä ilmoituksen. Kirjautumisnäkymään siirrytään painamalla painiketta "Back" ja tästä edelleen sisään sovellukseen.
 ## Arvosteluiden lista
 Sisäänkirjautumisen jälkeen siirrytään käyttäjän luomien arvosteluiden listaavaan näkymään:
 
@@ -37,5 +37,5 @@ Painamalla painiketta "Create review" siirrytään näkymään, jossa voidaan lu
 ## Arvosteluiden luonti
 ![Screenshot](./kuvat/create_review.png)
 
-Ravintolan nimi ja arvostelu kirjoitetaan syötekenttiin ja painetaan "Ok"-painiketta. Jos kentät ovat tyhjät, saa käyttäjä tästä ilmoituksen.
+Ravintolan nimi, arvostelu kirjallisena sekä numero, kirjoitetaan niille tarkoitettuihin kenttiin ja painetaan "Ok"-painiketta. Jos jokin kenttä on jäänyt tyhjäksi tai numero ei ole välillä 1-5, saa käyttäjä tästä ilmoituksen. Jos arvostelu luodaan onnistuneesti, saa käyttäjä tästä ilmoituksen.
 Painamalla painiketta "Back" pääsee takaisin listaan arvosteluista.
