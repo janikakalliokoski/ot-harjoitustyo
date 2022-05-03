@@ -29,6 +29,3 @@ class Review:
         self.rate = rate
         self.user = user
         self.id = review_id or str(uuid.uuid4())
-
-    def set_user(self, user):
-        self.user = user

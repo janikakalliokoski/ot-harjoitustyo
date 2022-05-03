@@ -3,30 +3,38 @@ from database_connection import get_database_connection
 
 
 def get_user_by_row(row):
+    """hakee käyttäjän.
+
+    Args:
+        row
+
+    Returns:
+        User-olio
+    """
     return User(row["username"], row["password"]) if row else None
 
 
 class UserRepository:
-    """Käyttäjiin liittyvistä tietokantaoperaatioista vastaava luokka.
+    """Tietokantaluokka käyttäjistä.
     """
 
     def __init__(self, connection):
         """Luokan konstruktori.
 
         Args:
-            connection (Connection): tietokantayhteyden Connection-olio
+            connection (Connection): Connection-olio joka kuvaa tietokantayhteyttä.
         """
 
         self._connection = connection
 
     def create_user(self, user):
-        """Tallettaa käyttäjän tietokantaan.
+        """Lisää käyttäjän tietokantaan.
 
         Args:
-            user (User): tallennettava käyttäjä User-oliona.
+            user (User): User-olio, joka lisätään tietokantaan.
 
         Returns:
-            User: tallennettu käyttäjä User-oliona
+            User: palauttaa lisätyn User-olion.
         """
         cursor = self._connection.cursor()
 

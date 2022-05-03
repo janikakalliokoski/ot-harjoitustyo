@@ -12,15 +12,16 @@ class TestUserRepository(unittest.TestCase):
 
     def test_create(self):
         User_repository.create_user(self.user1)
-        all = User_repository.find_users()
-        self.assertEqual(all[0].username, self.user1.username)
+        all_users = User_repository.find_users()
+        self.assertEqual(all_users[0].username, self.user1.username)
 
     def test_find_users(self):
         User_repository.create_user(self.user1)
         User_repository.create_user(self.user2)
-        all = User_repository.find_users()
-        self.assertEqual(all[0].username, self.user1.username)
-        self.assertEqual(all[1].username, self.user2.username)
+        all_users = User_repository.find_users()
+        self.assertEqual(all_users[0].username, self.user1.username)
+        self.assertEqual(all_users[1].username, self.user2.username)
+        self.assertEqual(len(all_users), 2)
 
     def test_find_by_username(self):
         User_repository.create_user(self.user2)

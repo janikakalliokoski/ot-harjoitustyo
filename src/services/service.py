@@ -83,7 +83,7 @@ class ReviewService:
         return self._user
 
     def get_all_users(self):
-        """Palauttaa kaikki käyttäjät jotka löytyvät tietokannasta.
+        """Palauttaa kaikki tietokannasta löytyvät käyttäjät.
 
         Returns:
             list: lista kaikista käyttäjistä User-olioina
@@ -125,12 +125,37 @@ class ReviewService:
 
         return user
 
+    def get_all_reviews(self):
+        """Hakee tietokannasta kaikki tehdyt arvostelut.
+
+        Returns:
+            list: Palauttaa listan kaikista tehdyistä arvioista Review-olioina.
+        """
+
+        return self._review_repository.find_reviews()
+
     def find_reviews_by_user(self, user):
+        """Hakee tietokannasta tietyn käyttäjän tekemät arvostelut.
+
+        Args:
+            user (User): käyttäjä, User-olio, jonka tekemät arvostelut haetaan.
+
+        Returns:
+            list: Palauttaa haetun käyttäjän tekemät arviot listana.
+        """
         reviews = self._review_repository.find_reviews_by_user(user)
 
         return reviews
 
     def create_review(self, review):
+        """Lisää uuden arvion tietokantaan.
+
+        Args:
+            review (Review): Arvostelu, joka lisätään tietokantaan.
+
+        Returns:
+            Review: Palauttaa lisätyn arvostelun.
+        """
         new = self._review_repository.create_review(review)
 
         return new

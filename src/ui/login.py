@@ -1,5 +1,4 @@
 from tkinter import ttk, constants, messagebox
-import tkinter
 from services.service import SERVICE, InvalidCredentialsError
 
 

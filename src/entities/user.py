@@ -15,6 +15,3 @@ class User:
         """
         self.username = username
         self.password = password
-
-    def set_user_id(self, username):
-        self.username = username

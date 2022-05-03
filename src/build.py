@@ -5,6 +5,6 @@ def build():
     initialize_database()
 
 
-# sallii funktion kutsumisen komentoriviltä käsin
+# mahdollistaa funktion kutsumisen komentoriviltä
 if __name__ == '__main__':
     build()
