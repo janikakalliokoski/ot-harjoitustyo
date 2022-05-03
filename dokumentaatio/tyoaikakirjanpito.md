@@ -22,4 +22,5 @@
 |       |  0,5  | arvioille oma tietokanta                              |
 |       |  4    | arvioiden tallettaminen tietokantaan                  |
 |       |  0,5  | arvioihin arvostelu 1-5                               |
-| yht:  |  29,5 |                                                       |
+| 3.5.  |   2   | testausta                                             |
+| yht:  |  31,5 |                                                       |
