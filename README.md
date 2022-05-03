@@ -18,14 +18,38 @@ Sovellus, jossa käyttäjä voi kirjata ylös missä ravintoloissa on käynyt ja
 [kayttoohje.md](https://github.com/janikakalliokoski/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
 
 ## Asennus
-1. asenna riippuvuudet komennolla poetry install
-2. suorita vaadittavat alustustoimenpiteet komennolla poetry run invoke build
-3. käynnistä sovellus komennolla poetry run invoke start
+1. asenna riippuvuudet komennolla:
+```bash
+poetry install
+```
+2. suorita vaadittavat alustustoimenpiteet komennolla: 
+```bash 
+poetry run invoke build
+```
+3. käynnistä sovellus komennolla:
+```bash
+ poetry run invoke start
+ ```
 
 ## Komentorivitoiminnot
 
-1. Ohjelman voi suorittaa komennolla poetry run invoke start
-2. Testit voi suorittaa komennolla poetry run invoke test
-3. Testikattavuuden saa komennolla poetry run invoke coverage-report
-4. Koodin voi automaattisesti formatoida komennolla poetry run invoke format
-5. Pylintin laatutarkistuksen saa komennolla poetry run invoke lint
+1. Ohjelman voi suorittaa komennolla:
+```bash
+ poetry run invoke start
+ ```
+2. Testit voi suorittaa komennolla:
+```bash
+ poetry run invoke test
+ ```
+3. Testikattavuuden saa komennolla:
+```bash
+ poetry run invoke coverage-report
+ ```
+4. Koodin voi automaattisesti formatoida komennolla:
+```bash
+ poetry run invoke format
+ ```
+5. Pylintin laatutarkistuksen saa komennolla:
+```bash
+ poetry run invoke lint
+ ```
