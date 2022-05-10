@@ -40,7 +40,7 @@ def create_tables(connection):
             restaurant text primary key,
             review text,
             rate text,
-            user integer references users
+            user text
         );
     ''')
 

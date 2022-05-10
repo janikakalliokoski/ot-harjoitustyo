@@ -15,7 +15,7 @@ class InvalidCredentialsError(Exception):
     Args:
         Exception
     """
-    pass
+
 
 
 class UsernameExistsError(Exception):
@@ -24,7 +24,7 @@ class UsernameExistsError(Exception):
     Args:
         Exception
     """
-    pass
+
 
 
 class ReviewService:

@@ -71,3 +71,19 @@ class TestReviewRepository(unittest.TestCase):
         found = review_repository.find_by_restaurant(restaurant)
 
         self.assertEqual(found.restaurant, restaurant)
+
+    def test_find_by_user(self):
+        User_repository.create_user(self.user1)
+
+        restaurant = self.review1.restaurant
+        review = self.review1.review
+        rate = self.review1.rate
+        user = self.user1.username
+
+        test_review = Review(restaurant, review, rate, user)
+
+        review_repository.create_review(test_review)
+
+        found = review_repository.find_reviews_by_user(user)
+
+        self.assertEqual(found[0].user, user)

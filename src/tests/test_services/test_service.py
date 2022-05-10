@@ -1,7 +1,5 @@
 import unittest
 from entities.user import User
-from repositories.user_repository import User_repository
-from repositories.review_repository import review_repository
 from services.service import (
     InvalidCredentialsError,
     ReviewService,

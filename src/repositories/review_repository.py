@@ -52,7 +52,7 @@ class ReviewRepository:
         """
         cursor = self._connection.cursor()
         cursor.execute(
-            "select * from reviews where user=?", (user.username))
+            "select * from reviews where user=?", (user,))
         reviews = cursor.fetchall()
         return list(map(get_review_by_row, reviews))
 
@@ -73,21 +73,6 @@ class ReviewRepository:
         restaurant = cursor.fetchone()
         return get_review_by_row(restaurant)
 
-    def find_by_restaurant_and_user(self, restaurant, user):
-        """Hakee arvostelun tietokannasta käyttäjänimen ja ravintolan perusteella.
-
-        Args:
-            restaurant (str)
-            user (User)
-
-        Returns:
-            Review: Palauttaa arvostelun ravintolasta Review-oliona.
-        """
-        cursor = self._connection.cursor()
-        cursor.execute(
-            "select * from reviews, users where restaurant=? and user=?", [restaurant, user])
-        review = cursor.fethcone()
-        return get_review_by_row(review)
 
     def find_reviews(self):
         """Hakee tietokannasta kaikki arvostelut.
