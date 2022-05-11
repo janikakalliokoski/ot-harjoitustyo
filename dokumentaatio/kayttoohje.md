@@ -38,5 +38,5 @@ Painamalla painiketta "Create review" siirrytään näkymään, jossa voidaan lu
 ## Arvosteluiden luonti
 ![Screenshot](./kuvat/create_review.png)
 
-Ravintolan nimi, arvostelu kirjallisena sekä numero, kirjoitetaan niille tarkoitettuihin kenttiin ja painetaan "Ok"-painiketta. Jos jokin kenttä on jäänyt tyhjäksi tai numero ei ole välillä 1-5, saa käyttäjä tästä ilmoituksen. Jos arvostelu luodaan onnistuneesti, saa käyttäjä tästä ilmoituksen.
+Ravintolan nimi, arvostelu kirjallisena, numero-arvosana ja käyttäjätunnus kirjoitetaan niille tarkoitettuihin kenttiin ja painetaan "Ok"-painiketta. Jos jokin kenttä on jäänyt tyhjäksi tai numero ei ole välillä 1-5, saa käyttäjä tästä ilmoituksen. Jos arvostelu luodaan onnistuneesti, saa käyttäjä tästä ilmoituksen.
 Painamalla painiketta "Back" pääsee takaisin listaan arvosteluista.
