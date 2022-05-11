@@ -24,3 +24,6 @@
 - arvioille oma tietokanta
 - arviot tallentuvat omaan tietokantaansa
 - käyttäjä saa virheilmoituksen jos jättää tyhjiksi arvioiden kenttiä
+
+## Viikko 7
+- arvostelut näkyvät näkymässä, johon pääsee kun kirjautuu sisään. Arvostelut näkyvät kaikille käyttäjille, ja arvostelussa lukee, mikä käyttäjä on luonut kyseisen arvostelun.
