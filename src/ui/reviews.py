@@ -8,7 +8,6 @@ class ReviewsView:
         self._root = root
         self._handle_login = handle_login
         self._handle_create = handle_create
-
         self._service = SERVICE
         self._frame = None
 
@@ -20,6 +19,18 @@ class ReviewsView:
     def destroy(self):
         self._frame.destroy()
 
+    def get_reviews(self):
+        reviews = self._service.get_all_reviews()
+
+        self.iid = 0
+
+        self.no_of_reviews = 1
+
+        for x in reviews:
+            self.tree.insert("", "end", iid=self.iid, text = self.no_of_reviews, values = (x.restaurant, x.review, x.rate, x.user))
+
+            self.iid = self.iid + 1
+            self.no_of_reviews = self.no_of_reviews + 1
 
     def _initialize(self):
         self._frame = ttk.Frame(master=self._root)
@@ -35,14 +46,15 @@ class ReviewsView:
             constants.E, constants.W), padx=5, pady=5)
 
         self.tree = ttk.Treeview(self._frame, columns=(
-            "Site", "Username", "Password"
+            "Restaurant", "Review", "Rate", "User"
         ))
         self.tree.heading("#0", text="id")
         self.tree.heading("#1", text="Restaurant")
         self.tree.heading("#2", text="Review")
         self.tree.heading("#3", text="Rate")
+        self.tree.heading("#4", text="by user:")
 
-        self.tree.column("0", width=100)
+        self.tree.column("#0", width=100)
         self.tree.grid(row=2, columnspan=4, sticky="nsew")
 
         button = ttk.Button(master=self._frame,
@@ -52,3 +64,5 @@ class ReviewsView:
             constants.E, constants.W), padx=5, pady=5)
 
         self._frame.grid_columnconfigure(1, weight=1, minsize=300)
+
+        self.get_reviews()

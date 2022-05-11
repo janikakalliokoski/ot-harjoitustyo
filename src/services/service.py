@@ -80,7 +80,7 @@ class ReviewService:
             User: kirjautunut käyttäjä.
         """
 
-        return self._user
+        return self._user.username
 
     def get_all_users(self):
         """Palauttaa kaikki tietokannasta löytyvät käyttäjät.

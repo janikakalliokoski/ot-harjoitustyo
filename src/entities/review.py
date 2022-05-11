@@ -11,7 +11,7 @@ class Review:
         review_id: merkkijonoarvo, joka kuvaa arvostelun id:tä.
     """
 
-    def __init__(self, restaurant, review, rate, user=None, review_id=None):
+    def __init__(self, restaurant, review, rate, user, review_id=None):
         """Luokan konstruktori, joka luo uuden arvion.
 
         Args:

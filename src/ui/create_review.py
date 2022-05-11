@@ -11,6 +11,7 @@ class CreateReviewview:
         self._name_entry = None
         self._review_entry = None
         self._rating_entry = None
+        self._user_entry = None
         self._user = user
 
         self._initialize()
@@ -25,30 +26,35 @@ class CreateReviewview:
         name = self._name_entry.get()
         review = self._review_entry.get()
         rate = self._rating_entry.get()
+        user = self._user_entry.get()
 
         rates = ["", "1", "2", "3", "4", "5"]
 
         empty = []
 
-        if len(name) == 0 or len(review) == 0 or len(rate) == 0:
+        if len(name) == 0 or len(review) == 0 or len(rate) == 0 or len(user) == 0:
             empty.append(1)
+
+        if user != SERVICE.get_current_user():
+            messagebox.showerror("username doesn't match", "Write the username you logged in with")
 
         if rate not in rates:
             messagebox.showerror(
                 "error in rate", "Rate should be between 1 and 5")
             return
 
-        new = Review(name, review, rate)
+        new = Review(name, review, rate, user)
 
         if len(empty) != 0:
             messagebox.showerror(
                 "empty lines", "Please fill in all the lines")
-        elif len(empty) == 0:
+        elif len(empty) == 0 and user == SERVICE.get_current_user():
             SERVICE.create_review(new)
             messagebox.showinfo("review created", "Review created!")
             self._name_entry.delete(0, "end")
             self._review_entry.delete(0, "end")
             self._rating_entry.delete(0, "end")
+            self._user_entry.delete(0, "end")
 
         return new
 
@@ -82,6 +88,14 @@ class CreateReviewview:
 
         rating.grid(padx=2, pady=2, sticky=(constants.W))
         self._rating_entry.grid(row=3, column=1, sticky=(
+            constants.E, constants.W), padx=2, pady=2)
+
+        user = ttk.Label(master=self._frame, text="Write your username here:",
+                           foreground="deep pink", font=("Times 15"))
+        self._user_entry = ttk.Entry(master=self._frame)
+
+        user.grid(padx=2, pady=2, sticky=(constants.W))
+        self._user_entry.grid(row=4, column=1, sticky=(
             constants.E, constants.W), padx=2, pady=2)
 
         button1 = ttk.Button(master=self._frame, text="Ok",
