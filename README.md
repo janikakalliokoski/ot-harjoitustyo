@@ -1,9 +1,11 @@
 # Ravintoloiden arvostelusovellus
 
-Sovellus, jossa käyttäjä voi kirjata ylös missä ravintoloissa on käynyt ja antaa niille arvostelut
+Sovellus, jossa käyttäjä voi kirjata ylös missä ravintoloissa on käynyt ja antaa niille arvostelut sekä nähdä muiden käyttäjien luomat arvostelut ravintoloista.
 
 ## Release
 [linkki release1](https://github.com/janikakalliokoski/ot-harjoitustyo/releases/tag/viikko5):seen
+
+[linkki release2](https://github.com/janikakalliokoski/ot-harjoitustyo/releases/tag/viikko6):seen
 
 ## Dokumentaatio
 
@@ -18,6 +20,8 @@ Sovellus, jossa käyttäjä voi kirjata ylös missä ravintoloissa on käynyt ja
 [kayttoohje.md](https://github.com/janikakalliokoski/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
 
 ## Asennus
+TÄRKEÄ: Python version täytyy olla vähintään 3.8.12., jotta sovelluksen voi käynnistää.
+
 1. asenna riippuvuudet komennolla:
 ```bash
 poetry install
