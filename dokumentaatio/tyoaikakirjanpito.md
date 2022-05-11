@@ -24,4 +24,5 @@
 |       |  0,5  | arvioihin arvostelu 1-5                               |
 | 3.5.  |   2   | testausta                                             |
 |       |   1   | dokumentaatio                                         |
-| yht:  |  32,5 |                                                       |
+| 11.5. |   2   | arvostelut näkyviin kaikille käyttäjille              |
+| yht:  |  34,5 |                                                       |
