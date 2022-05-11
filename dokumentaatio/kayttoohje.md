@@ -1,5 +1,6 @@
 ### Käyttöohje
-Lataa projektin viimeisimmän [releasen](https://github.com/janikakalliokoski/ot-harjoitustyo/releases/tag/viikko5) lähdekoodi valitsemalla *Assets*-osion alta *Source code*.
+Lataa projektin viimeisimmän [releasen](https://github.com/janikakalliokoski/ot-harjoitustyo/releases/tag/viikko5) lähdekoodi valitsemalla *Assets*-osion alta *Source code*. Python version on oltava vähintään 3.8.12., jotta sovelluksen voi käynnistää.
+
 ## Ohjelman käynnistäminen
 1. Asenna riippuvuudet komennolla:
 ```bash
