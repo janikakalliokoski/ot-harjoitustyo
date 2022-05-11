@@ -36,7 +36,8 @@ class CreateReviewview:
             empty.append(1)
 
         if user != SERVICE.get_current_user():
-            messagebox.showerror("username doesn't match", "Write the username you logged in with")
+            messagebox.showerror("username doesn't match",
+                                 "Write the username you logged in with")
 
         if rate not in rates:
             messagebox.showerror(
@@ -91,7 +92,7 @@ class CreateReviewview:
             constants.E, constants.W), padx=2, pady=2)
 
         user = ttk.Label(master=self._frame, text="Write your username here:",
-                           foreground="deep pink", font=("Times 15"))
+                         foreground="deep pink", font=("Times 15"))
         self._user_entry = ttk.Entry(master=self._frame)
 
         user.grid(padx=2, pady=2, sticky=(constants.W))

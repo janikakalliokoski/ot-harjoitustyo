@@ -17,14 +17,12 @@ class InvalidCredentialsError(Exception):
     """
 
 
-
 class UsernameExistsError(Exception):
     """luokka, joka tuottaa virheen jos käyttäjätunnus on valmiiksi jo olemassa
 
     Args:
         Exception
     """
-
 
 
 class ReviewService:

@@ -5,6 +5,7 @@ from repositories.user_repository import User_repository
 from entities.review import Review
 from entities.user import User
 
+
 class TestReviewRepository(unittest.TestCase):
     def setUp(self):
         review_repository.delete_reviews()

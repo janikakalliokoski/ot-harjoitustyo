@@ -15,6 +15,7 @@ def get_review_by_row(row):
 class ReviewRepository:
     """Tietokantaluokka arvosteluista.
     """
+
     def __init__(self, connection):
         """Luokan konstruktori.
 
@@ -36,7 +37,7 @@ class ReviewRepository:
 
         cursor.execute(
             "insert or ignore into reviews (restaurant, review, rate, user) values (?,?,?,?)",
-                       (review.restaurant, review.review, review.rate, review.user))
+            (review.restaurant, review.review, review.rate, review.user))
 
         self._connection.commit()
         return review
@@ -72,7 +73,6 @@ class ReviewRepository:
         )
         restaurant = cursor.fetchone()
         return get_review_by_row(restaurant)
-
 
     def find_reviews(self):
         """Hakee tietokannasta kaikki arvostelut.

@@ -7,6 +7,7 @@ from services.service import (
 )
 from entities.review import Review
 
+
 class FakeUserRepository:
     def __init__(self, users=None):
         self.users = users or []
@@ -31,6 +32,7 @@ class FakeUserRepository:
 
     def delete_all(self):
         self.users = []
+
 
 class FakeReviewRepository:
     def __init__(self, reviews=None):
@@ -65,7 +67,8 @@ class TestService(unittest.TestCase):
         )
 
         self.user_janika = User("janika", "abc123")
-        self.review_restaurant1 = Review("restaurant1", "nice", "3", self.user_janika)
+        self.review_restaurant1 = Review(
+            "restaurant1", "nice", "3", self.user_janika)
 
     def login_user(self, user):
         self.service.create_user(user.username, user.password)
@@ -142,6 +145,5 @@ class TestService(unittest.TestCase):
         self.service.create_review(review)
 
         reviews = self.service.get_all_reviews()
-
 
         self.assertNotEqual(reviews[0].rate, "16")

@@ -27,7 +27,8 @@ class ReviewsView:
         self.no_of_reviews = 1
 
         for x in reviews:
-            self.tree.insert("", "end", iid=self.iid, text = self.no_of_reviews, values = (x.restaurant, x.review, x.rate, x.user))
+            self.tree.insert("", "end", iid=self.iid, text=self.no_of_reviews, values=(
+                x.restaurant, x.review, x.rate, x.user))
 
             self.iid = self.iid + 1
             self.no_of_reviews = self.no_of_reviews + 1
@@ -36,7 +37,7 @@ class ReviewsView:
         self._frame = ttk.Frame(master=self._root)
 
         label = ttk.Label(master=self._frame,
-                          text="Reviews of restaurants visited", foreground="deep pink", font=("Times 20 bold"))
+                          text="Reviews of restaurants", foreground="deep pink", font=("Times 20 bold"))
         label.grid(columnspan=2, sticky=constants.EW, padx=2, pady=2)
 
         button2 = ttk.Button(
