@@ -19,8 +19,9 @@ Sovellus, jossa käyttäjä voi kirjata ylös missä ravintoloissa on käynyt ja
 
 [kayttoohje.md](https://github.com/janikakalliokoski/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
 
+### ⚠️ TÄRKEÄ: Python version täytyy olla vähintään 3.8.12., jotta sovelluksen voi käynnistää.
+
 ## Asennus
-TÄRKEÄ: Python version täytyy olla vähintään 3.8.12., jotta sovelluksen voi käynnistää.
 
 1. asenna riippuvuudet komennolla:
 ```bash
