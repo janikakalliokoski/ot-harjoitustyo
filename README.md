@@ -2,6 +2,9 @@
 
 Sovellus, jossa käyttäjä voi kirjata ylös missä ravintoloissa on käynyt ja antaa niille arvostelut sekä nähdä muiden käyttäjien luomat arvostelut ravintoloista.
 
+
+### ⚠️ TÄRKEÄ: Python version täytyy olla vähintään 3.8.12., jotta sovelluksen voi käynnistää.
+
 ## Release
 [linkki release1](https://github.com/janikakalliokoski/ot-harjoitustyo/releases/tag/viikko5):seen
 
@@ -19,7 +22,7 @@ Sovellus, jossa käyttäjä voi kirjata ylös missä ravintoloissa on käynyt ja
 
 [kayttoohje.md](https://github.com/janikakalliokoski/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
 
-### ⚠️ TÄRKEÄ: Python version täytyy olla vähintään 3.8.12., jotta sovelluksen voi käynnistää.
+[testaus.md](https://github.com/janikakalliokoski/ot-harjoitustyo/blob/master/dokumentaatio/testaus.md)
 
 ## Asennus
 
