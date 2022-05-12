@@ -57,7 +57,7 @@ class ReviewsView:
         self.tree.heading("#1", text="Restaurant")
         self.tree.heading("#2", text="Review")
         self.tree.heading("#3", text="Rate")
-        self.tree.heading("#4", text="by user:")
+        self.tree.heading("#4", text="Review made by user:")
 
         self.tree.column("#0", width=100)
         self.tree.grid(row=2, columnspan=4, sticky="nsew")

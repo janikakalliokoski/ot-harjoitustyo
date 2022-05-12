@@ -38,7 +38,7 @@ class CreateReviewview:
         space = " "
 
         if space in name or space in review:
-            messagebox.showerror("Invalid characters", "Name or rate can't contain empty characters")
+            messagebox.showerror("Invalid characters", "Lines can't contain empty characters")
             return
 
         if len(name) == 0 or len(review) == 0 or len(rate) == 0 or len(user) == 0:
