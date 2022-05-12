@@ -27,7 +27,7 @@ Kirjautumisnäkymästä voi siirtyä käyttäjän luomisnäkymään painamalla p
 
 ![Screenshot](./kuvat/create_user.png)
 
-Käyttäjä luodaan valitsemalla mieleinen käyttäjätunnus, jossa on vähintään 5 merkkiä, sekä salasana, jossa on vähintään 6 merkkiä. Jos käyttäjätunnus ei ole varattu, voidaan käyttäjä luoda painamalla painiketta "Create user". Jos luonti onnistuu, saa käyttäjä tästä ilmoituksen. Kirjautumisnäkymään siirrytään painamalla painiketta "Back" ja tästä edelleen sisään sovellukseen.
+Käyttäjä luodaan valitsemalla mieleinen käyttäjätunnus, jossa on vähintään 5 merkkiä, sekä salasana, jossa on vähintään 6 merkkiä. Jos käyttäjätunnus ei ole varattu, voidaan käyttäjä luoda painamalla painiketta "Create user". Jos luonti onnistuu, saa käyttäjä tästä ilmoituksen. Jos käyttäjätunnus on varattu, liian lyhyt tai sisältää tyhjiä merkkejä, saa käyttäjä tästä virheilmoituksen. Käyttäjä saa myös virheilmoituksen, jos salasana on liian lyhyt tai sisältää tyhjiä merkkejä. Kirjautumisnäkymään siirrytään painamalla painiketta "Back" ja tästä edelleen sisään sovellukseen.
 ## Arvosteluiden lista
 Sisäänkirjautumisen jälkeen siirrytään käyttäjän luomien arvosteluiden listaavaan näkymään:
 
@@ -38,5 +38,5 @@ Painamalla painiketta "Create review" siirrytään näkymään, jossa voidaan lu
 ## Arvosteluiden luonti
 ![Screenshot](./kuvat/create_review.png)
 
-Ravintolan nimi, arvostelu kirjallisena, numero-arvosana ja käyttäjätunnus kirjoitetaan niille tarkoitettuihin kenttiin ja painetaan "Ok"-painiketta. Jos jokin kenttä on jäänyt tyhjäksi, numero ei ole välillä 1-5 tai käyttäjätunnus ei täsmää kirjautuneeseen käyttäjään, saa käyttäjä tästä ilmoituksen. Jos arvostelu luodaan onnistuneesti, saa käyttäjä tästä ilmoituksen.
+Ravintolan nimi, arvostelu kirjallisena, numero-arvosana ja käyttäjätunnus kirjoitetaan niille tarkoitettuihin kenttiin ja painetaan "Ok"-painiketta. Jos jokin kenttä on jäänyt tyhjäksi, numero ei ole välillä 1-5 tai käyttäjätunnus ei täsmää kirjautuneeseen käyttäjään, saa käyttäjä tästä ilmoituksen. Käyttäjä saa myös virheilmoituksen silloin, jos jokin kenttä sisältää tyhjiä merkkejä. Jos arvostelu luodaan onnistuneesti, saa käyttäjä tästä ilmoituksen ja arvostelu ilmestyy arvosteluita listaavaan näkymään.
 Painamalla painiketta "Back" pääsee takaisin listaan arvosteluista.
