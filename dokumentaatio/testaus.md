@@ -14,7 +14,7 @@ Sovelluksen logiikasta vastaavaa `ReviewService`-luokkaa testataan [ReviewServic
 
 ### Testikattavuus
 
-Käyttöliittymäkerros pois jättäen ohjelman testauksen haarautumakattavuus on 95%
+Käyttöliittymäkerros pois jättäen ohjelman testauksen haarautumakattavuus on 96%
 
 ![Screenshot](./kuvat/coverage_report.png)
 
