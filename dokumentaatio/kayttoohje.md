@@ -31,12 +31,12 @@ Käyttäjä luodaan valitsemalla mieleinen käyttäjätunnus, jossa on vähintä
 ## Arvosteluiden lista
 Sisäänkirjautumisen jälkeen siirrytään käyttäjän luomien arvosteluiden listaavaan näkymään:
 
-***kesken***
+![Screenshot](./kuvat/reviews.png)
 
 Näkymästä voi kirjautua ulos painamalla painiketta "Log out", joka vie takaisin kirjautumisnäkymään. 
 Painamalla painiketta "Create review" siirrytään näkymään, jossa voidaan luoda arvostelu ravintolasta.
 ## Arvosteluiden luonti
 ![Screenshot](./kuvat/create_review.png)
 
-Ravintolan nimi, arvostelu kirjallisena, numero-arvosana ja käyttäjätunnus kirjoitetaan niille tarkoitettuihin kenttiin ja painetaan "Ok"-painiketta. Jos jokin kenttä on jäänyt tyhjäksi tai numero ei ole välillä 1-5, saa käyttäjä tästä ilmoituksen. Jos arvostelu luodaan onnistuneesti, saa käyttäjä tästä ilmoituksen.
+Ravintolan nimi, arvostelu kirjallisena, numero-arvosana ja käyttäjätunnus kirjoitetaan niille tarkoitettuihin kenttiin ja painetaan "Ok"-painiketta. Jos jokin kenttä on jäänyt tyhjäksi, numero ei ole välillä 1-5 tai käyttäjätunnus ei täsmää kirjautuneeseen käyttäjään, saa käyttäjä tästä ilmoituksen. Jos arvostelu luodaan onnistuneesti, saa käyttäjä tästä ilmoituksen.
 Painamalla painiketta "Back" pääsee takaisin listaan arvosteluista.
