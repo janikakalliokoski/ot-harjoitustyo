@@ -1,6 +1,6 @@
 # Vaatimusmäärittely
 ## Sovelluksen tarkoitus
-Sovelluksen avulla käyttäjät pystyvät antamaan ravintoloille kirjallisen arvostelun missä he ovat käyneet ja arvostelut näkyvät kaikille käyttäjille.
+Sovelluksen avulla käyttäjät pystyvät antamaan ravintoloille kirjallisen arvostelun sekä arvosanan 1-5 missä he ovat käyneet ja arvostelut näkyvät kaikille käyttäjille.
 ## Käyttäjät
 Alkuun sovelluksessa on vain yksi käyttäjärooli, eli se käyttäjä, joka luo ravintola-arvostelun sovellukseen. TEHTY
 ## Käyttöliittymät
@@ -20,6 +20,7 @@ Sovellus koostuu neljästä eri käyttöliittymästä. Kirjautumisnäkymä johon
 Perusversiota voi laajentaa esimerkiksi seuraavasti:
 - Arvosteluiden editointi
 - Arvosteluiden poistaminen
+- Arvosteluiden etsiminen ravintolan tai käyttäjän perusteella
 - Ravintoloiden järjestäminen parhaimmasta huonoimpaan arvosteluiden mukaan
 - Käyttäjätunnuksen poisto
 - Admin käyttäjä, joka voi poistaa normaalikäyttäjien arvosteluja sekä poistaa normaalikäyttäjiä
