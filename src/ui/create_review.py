@@ -4,6 +4,8 @@ from entities.review import Review
 
 
 class CreateReviewview:
+    """Luokka, joka näyttää näkymän, jossa arvio ravintolasta luodaan.
+    """
     def __init__(self, root, handle_review, user=None):
         self._root = root
         self._handle_review = handle_review
@@ -17,6 +19,8 @@ class CreateReviewview:
         self._initialize()
 
     def pack(self):
+        """Vastaa siitä, miten asiat on sijoitettu käyttöliittymään.
+        """
         self._frame.pack(fill=constants.X)
 
     def destroy(self):
@@ -28,9 +32,14 @@ class CreateReviewview:
         rate = self._rating_entry.get()
         user = self._user_entry.get()
 
-        rates = ["", "1", "2", "3", "4", "5"]
+        rates = ["", " ", "1", "2", "3", "4", "5"]
 
         empty = []
+        space = " "
+
+        if space in name or space in review:
+            messagebox.showerror("Invalid characters", "Name or rate can't contain empty characters")
+            return
 
         if len(name) == 0 or len(review) == 0 or len(rate) == 0 or len(user) == 0:
             empty.append(1)

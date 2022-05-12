@@ -118,7 +118,7 @@ class TestService(unittest.TestCase):
 
         current = self.service.get_current_user()
 
-        self.assertEqual(current.username, self.user_janika.username)
+        self.assertEqual(current, self.user_janika.username)
 
     def test_create_review_successfully(self):
         restaurant = self.review_restaurant1.restaurant

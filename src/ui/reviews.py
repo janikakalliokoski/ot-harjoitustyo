@@ -4,6 +4,8 @@ from services.service import SERVICE
 
 
 class ReviewsView:
+    """Luokka, joka näyttää näkymän, jossa on arvostelut ravintoloista.
+    """
     def __init__(self, root, handle_login, handle_create):
         self._root = root
         self._handle_login = handle_login
@@ -14,6 +16,8 @@ class ReviewsView:
         self._initialize()
 
     def pack(self):
+        """Vastaa siitä, miten asiat on sijoitettu käyttöliittymään.
+        """
         self._frame.pack(fill=constants.X)
 
     def destroy(self):

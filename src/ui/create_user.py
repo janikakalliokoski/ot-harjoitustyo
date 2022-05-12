@@ -3,6 +3,8 @@ from services.service import SERVICE, UsernameExistsError
 
 
 class CreateUserView:
+    """Luokka, joka näyttää näkymän, jossa käyttäjä luodaan
+    """
     def __init__(self, root, handle_show_login_view, handle_create_user):
         self._root = root
         self._handle_show_login_view = handle_show_login_view
@@ -14,6 +16,8 @@ class CreateUserView:
         self._initialize()
 
     def pack(self):
+        """Vastaa siitä, miten asiat on sijoitettu käyttöliittymään.
+        """
         self._frame.pack(fill=constants.X)
 
     def destroy(self):
@@ -23,8 +27,14 @@ class CreateUserView:
         username = self._username_entry.get()
         password = self._password_entry.get()
 
+        space = " "
+
         if len(username) == 0 or len(password) == 0:
             messagebox.showerror("empty", "Username and password required")
+            return
+
+        if space in username or space in password:
+            messagebox.showerror("Invalid characters", "Username or password can't contain empty characters")
             return
 
         if len(username) < 5:

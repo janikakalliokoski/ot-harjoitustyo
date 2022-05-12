@@ -5,6 +5,8 @@ from ui.reviews import ReviewsView
 
 
 class UI:
+    """Luokka, joka vastaa näkymien välillä vaihdosta.
+    """
     def __init__(self, root):
         self._root = root
         self._current_view = None
