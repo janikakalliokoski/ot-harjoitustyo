@@ -8,6 +8,16 @@ Ohjelman osien suhdetta kuvaava pakkauskaavio:
 
 Pakkaus *ui* sisältää käyttöliittymästä, *services* sovelluslogiikasta ja *repositories* tietojen pysyväistallennuksesta vastaavat tiedostot. Pakkaus *entities* sisältää luokat *User* ja *Review*, jotka kuvastavat sovelluksen käyttämiä tietokohteita.
 
+## Sovelluslogiikka
+
+Ohjelman tietomallin muodostavat [User](https://github.com/janikakalliokoski/ot-harjoitustyo/blob/master/src/entities/user.py) ja [Review](https://github.com/janikakalliokoski/ot-harjoitustyo/blob/master/src/entities/review.py) luokat, ja ne kuvaavat sovellukseen luotuja käyttäjiä ja niiden tekemiä arvioita ravintoloista.
+
+![Screenshot](./kuvat/logiikka.png)
+
+Toiminnallisista kokonaisuuksista vastaa [ReviewService](https://github.com/janikakalliokoski/ot-harjoitustyo/blob/master/src/services/service.py)-luokan olio ReviewService. Luokassa on jokaiselle käyttöliittymän toiminnolle oma metodi, kuten `login(username, password)`, `create_user(username, password, login=True)`, `find_reviews_by_user(user)` ja `create_review(review)`. 
+
+_ReviewService_-luokka pääsee _repositories_ pakkauksessa sijaitsevien luokkien [UserRepository](https://github.com/janikakalliokoski/ot-harjoitustyo/blob/master/src/repositories/user_repository.py) ja [ReviewRepository](https://github.com/janikakalliokoski/ot-harjoitustyo/blob/master/src/repositories/review_repository.py) avulla käsiksi käyttäjiin ja arvioihin liittyviin tietoihin. 
+
 ## Käyttöliittymä
 
 Käyttöliittymä sisältää neljä erillistä näkymää:
