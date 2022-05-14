@@ -11,3 +11,5 @@ data/test-database.sqlite
 dbs/tests.db
 dbs/users.db
 dbs
+data/database.sqlite
+data/test-database.sqlite
