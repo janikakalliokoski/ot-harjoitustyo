@@ -25,4 +25,5 @@
 | 3.5.  |   2   | testausta                                             |
 |       |   1   | dokumentaatio                                         |
 | 11.5. |   2   | arvostelut näkyviin kaikille käyttäjille              |
-| yht:  |  34,5 |                                                       |
+| 14.5. |   3   | dokumentaatio                                         |
+| yht:  |  38,5 |                                                       |
